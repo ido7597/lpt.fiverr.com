@@ -1,0 +1,1535 @@
+<!DOCTYPE html><html lang="en" style="scroll-behavior: smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All your architecture needs</title>
+
+  <style type="text/css">
+    @font-face {
+      font-family: "Macan";
+      src: url("assets/502483a0eb7a0109bba05fbd9b3743e7.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Macan";
+      src: url("assets/3d263b5d897300221339f211f2b74e5e.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Macan";
+      src: url("assets/d147812d01ddb77d6c271d088b816751.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <!-- Tailwind CSS -->
+  
+
+  
+
+  
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K5HJ679');</script>
+<!-- End Google Tag Manager -->
+  <!-- Mixpanel -->
+  <script type="text/javascript">
+  (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&((a=a[b[0]]),(d=b[1]));a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)));};}var a=b;"undefined"!==typeof c?(a=b[c]=[]):(c="mixpanel");a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d;};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2]);};}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d;};b._i.push([e,f,c]);};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g);}})(document,window.mixpanel||[]);
+  mixpanel.init("85e4a78448be5212958bd77a4aa38257", {
+   track_pageview: true
+});
+  </script>
+<link rel="stylesheet" href="styles-aecd35ef9aed37b0a563c2b150068e23.css">
+    <script>
+      window.lucide = {
+        createIcons: ()=>{}
+      }
+    </script>
+  </head>
+
+<body class="font-macan text-body bg-white">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5HJ679" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Header Section -->
+  <header id="header" class="relative z-[100] bg-white shadow-md transition-all duration-300">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo - Keeping this intact -->
+<a href="https://www.fiverr.com" class="flex items-center space-x-2 text-2xl font-bold text-primary transition-transform duration-300 hover:scale-105" data-anx-event="click_logo" data-anx-props-action="navigate" data-anx-props-scope="header">
+          <img src="assets/df852837e67bfdb312ac8a8d453525f0.webp" alt="Fiverr Logo" class="h-6" decoding="async" style="aspect-ratio: 291 / 87">
+        </a>
+
+        <!-- Search Component -->
+        <form id="search-form" class="hidden md:flex flex-1 mx-6" onsubmit="handleSearch(event)">
+          <div class="relative flex w-full max-w-lg">
+            <input type="text" id="search-input" placeholder="What service are you looking for today?" class="w-full px-4 py-2 border border-black rounded-l-md focus:outline-none">
+<button type="submit" class="bg-black text-white px-4 py-2 rounded-r-md hover:bg-gray-800 transition-colors duration-300 flex items-center justify-center" data-anx-event="search_submit" data-anx-props-action="search" data-anx-props-scope="header">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Modified CTA Button - Changed styling and removed arrow icon -->
+        <div class="flex items-center">
+<a href="https://www.fiverr.com/join" class="px-6 py-3 border border-neutral-gray text-neutral-gray font-bold rounded-md transition-all duration-300 hover:bg-neutral-gray hover:text-white hover:shadow-lg" data-anx-event="click_join" data-anx-props-action="signup" data-anx-props-scope="header">
+            <span>Join</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button - Keeping this for mobile responsiveness -->
+<button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-neutral-gray hover:bg-neutral-gray hover:text-white transition-colors duration-300" aria-label="Menu" data-anx-event="toggle_mobile_menu" data-anx-props-action="toggle" data-anx-props-scope="header">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Simplified Mobile Navigation Menu - Added search for mobile -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 rounded-lg bg-white shadow-lg overflow-hidden transition-all duration-300">
+        <!-- Mobile Search -->
+        <div class="px-4 py-3">
+          <form id="mobile-search-form" onsubmit="handleSearch(event)">
+            <div class="relative flex w-full">
+              <input type="text" id="mobile-search-input" placeholder="What service are you looking for today?" class="w-full px-4 py-2 border border-black rounded-l-md focus:outline-none">
+              <button type="submit" class="bg-black text-white px-4 py-2 rounded-r-md hover:bg-gray-800 transition-colors duration-300 flex items-center justify-center">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="flex justify-center py-3">
+          <a href="https://www.fiverr.com/join" class="px-6 py-3 border border-neutral-gray text-neutral-gray font-bold rounded-md transition-all duration-300 hover:bg-neutral-gray hover:text-white">
+            Join
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+
+          // Change icon based on menu state
+          const icon = menuButton.querySelector("i,svg");
+          if (mobileMenu.classList.contains("hidden")) {
+            icon.setAttribute("data-lucide", "menu");
+          } else {
+            icon.setAttribute("data-lucide", "x");
+          }
+          lucide.createIcons();
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            event.target?.closest &&
+            (event.target.closest("#mobile-menu-toggle") ||
+              event.target.closest("#mobile-menu"))
+          ) {
+            return;
+          }
+          mobileMenu.classList.add("hidden");
+          const icon = menuButton.querySelector("i,svg");
+          icon.setAttribute("data-lucide", "menu");
+          lucide.createIcons();
+        });
+
+      });
+
+      // Search functionality
+      function handleSearch(event) {
+        event.preventDefault();
+
+        // Get search input value (from either desktop or mobile)
+        const searchInput = event.target.closest("form").querySelector("input");
+        const searchTerm = searchInput.value.trim();
+
+        if (searchTerm) {
+          // Construct the search URL
+          const searchUrl = `https://www.fiverr.com/search/gigs?query=${encodeURIComponent(searchTerm)}&source=top-bar&search_in=everywhere&search-autocomplete-original-term=${encodeURIComponent(searchTerm)}`;
+
+          // Open in a new tab
+          window.open(searchUrl, "_blank");
+
+          // Clear the input
+          searchInput.value = "";
+        }
+      }
+    </script>
+  </header>
+
+
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative overflow-hidden py-16 max-h-[450px] h-[450px] bg-gradient-to-br from-[#2e0a16] via-[#4d1727] to-[#6d2539]">
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center max-w-4xl mx-auto pt-8">
+      <h1 class="text-[56px] font-macan text-white mb-3 relative inline-block leading-[1.2em]">
+All your architecture and<br>interior design needs
+      </h1>
+      <p class="text-white/90 text-lg max-w-4xl mx-auto mt-2 font-light">
+        Transform any space with the help of top freelancers.
+      </p>
+
+      <!-- CTA Button styled like GMP site -->
+      <div class="mt-8">
+<a href="https://www.fiverr.com/categories/graphics-design/architectural-design-services?show_join=true?source=drop_down_filters&amp;ref=seller_level%3Atop_rated_seller%2Clevel_two_seller" class="inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-black bg-white rounded-xl hover:bg-opacity-90 transition-all duration-300" data-anx-event="explore_talent" data-anx-props-action="browse" data-anx-props-scope="hero">
+          Explore talent
+        </a>
+        <p class="text-white/70 text-sm mt-3">
+          *Free registration. No credit card required.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+  <!-- Key Features Section -->
+  <section id="features" class="relative overflow-hidden py-16">
+  <div class="container mx-auto px-4 relative z-10 mt-6">
+    <!-- Architecture Services Categories Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 3D Modeling & Rendering Card -->
+<a href="https://www.fiverr.com/categories/graphics-design/architectural-design-services/rendering-modeling?show_join=true" class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96 block" data-anx-event="view_category" data-anx-props-action="browse" data-anx-props-category="3d_modeling">
+        <img src="assets/f5d28c65305cfbab7379874b35574365.webp" alt="3D Modeling &amp; Rendering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 1024 / 768">
+
+        <!-- Color Overlay - Changed to black gradient with 50% opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="text-[#404145] text-lg px-3 py-1.5 bg-white bg-opacity-90 shadow-md rounded-md">3D Modeling &amp; Rendering</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="text-white text-sm mb-4">
+            Transform architectural concepts into photorealistic visualizations.
+            Our experts deliver precision-crafted 3D renderings that bring your
+            designs to life with stunning detail and clarity.
+          </p>
+          <span class="bg-white text-[#404145] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-transparent hover:text-white hover:border hover:border-white text-center w-full mt-2 inline-block">
+            Find an expert
+          </span>
+        </div>
+      </a>
+
+      <!-- 2D Drawings & Floor Plans Card -->
+<a href="https://www.fiverr.com/categories/graphics-design/architectural-design-services/2d-drawings?show_join=true" class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96 block" data-anx-event="view_category" data-anx-props-action="browse" data-anx-props-category="2d_drawings">
+        <img src="assets/696c10d4fd8f9db59488f9278c8ad336.webp" alt="2D Drawings &amp; Floor Plans" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 1024 / 1024">
+
+        <!-- Color Overlay - Changed to black gradient with 50% opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="text-[#404145] text-lg px-3 py-1.5 bg-white bg-opacity-90 shadow-md rounded-md">2D Drawings &amp; Floor Plans</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="text-white text-sm mb-4">
+            Get precise technical drawings and floor plans for your construction
+            projects. Our experts create detailed blueprints with accurate
+            measurements and specifications to guide your building process.
+          </p>
+          <span class="bg-white text-[#404145] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-transparent hover:text-white hover:border hover:border-white text-center w-full mt-2 inline-block">
+            Find an expert
+          </span>
+        </div>
+      </a>
+
+      <!-- Architectural Planning Card -->
+<a href="https://www.fiverr.com/categories/graphics-design/architectural-design-services/planning?show_join=true" class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96 block" data-anx-event="view_category" data-anx-props-action="browse" data-anx-props-category="planning">
+        <img src="assets/11bc79d503fdbd59db00aac55b0c1832.webp" alt="Architectural Planning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 1024 / 1024">
+
+        <!-- Color Overlay - Changed to black gradient with 50% opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="text-[#404145] text-lg px-3 py-1.5 bg-white bg-opacity-90 shadow-md rounded-md">Architectural Planning</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="text-white text-sm mb-4">
+            Develop comprehensive architectural plans for your project. Our
+            planning experts create detailed site analyses, zoning studies, and
+            conceptual designs to ensure your vision meets all requirements.
+          </p>
+          <span class="bg-white text-[#404145] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-transparent hover:text-white hover:border hover:border-white text-center w-full mt-2 inline-block">
+            Find an expert
+          </span>
+        </div>
+      </a>
+
+      <!-- Interior Design Card -->
+<a href="https://www.fiverr.com/categories/graphics-design/architectural-design-services/interior-design?show_join=true" class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96 block" data-anx-event="view_category" data-anx-props-action="browse" data-anx-props-category="interior_design">
+        <img src="assets/a006ff4a6cacc2f67e7b9d7b5c82ffdb.webp" alt="Interior Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 1024 / 1024">
+
+        <!-- Color Overlay - Changed to black gradient with 50% opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="text-[#404145] text-lg px-3 py-1.5 bg-white bg-opacity-90 shadow-md rounded-md">Interior Design</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="text-white text-sm mb-4">
+            Transform your spaces with professional interior design services.
+            Our designers create functional and aesthetically pleasing interiors
+            with carefully selected materials, colors, and furnishings.
+          </p>
+          <span class="bg-white text-[#404145] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-transparent hover:text-white hover:border hover:border-white text-center w-full mt-2 inline-block">
+            Find an expert
+          </span>
+        </div>
+      </a>
+
+      <!-- Landscape Design Card -->
+<a href="https://www.fiverr.com/categories/graphics-design/landscape-design?show_join=true" class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96 block" data-anx-event="view_category" data-anx-props-action="browse" data-anx-props-category="landscape_design">
+        <img src="assets/6614e7f3d59d29bf402a3d90ca5ae44b.webp" alt="Landscape Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 1024 / 1024">
+
+        <!-- Color Overlay - Changed to black gradient with 50% opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="text-[#404145] text-lg px-3 py-1.5 bg-white bg-opacity-90 shadow-md rounded-md">Landscape Design</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="text-white text-sm mb-4">
+            Create stunning outdoor environments with expert landscape design.
+            Our designers craft beautiful gardens, patios, and outdoor living
+            spaces that complement your architecture and natural surroundings.
+          </p>
+          <span class="bg-white text-[#404145] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-transparent hover:text-white hover:border hover:border-white text-center w-full mt-2 inline-block">
+            Find an expert
+          </span>
+        </div>
+      </a>
+
+      <!-- Building Engineering Card -->
+<a href="https://www.fiverr.com/categories/graphics-design/building-engineering?show_join=true" class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96 block" data-anx-event="view_category" data-anx-props-action="browse" data-anx-props-category="building_engineering">
+        <img src="assets/c7c3d142104e4cad895609842f16d30d.webp" alt="Building Engineering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 1024 / 1024">
+
+        <!-- Color Overlay - Changed to black gradient with 50% opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="text-[#404145] text-lg px-3 py-1.5 bg-white bg-opacity-90 shadow-md rounded-md">Building Engineering</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="text-white text-sm mb-4">
+            Ensure structural integrity and efficiency with professional
+            building engineering services. Our engineers provide structural
+            analysis, MEP systems design, and technical solutions for
+            construction challenges.
+          </p>
+          <span class="bg-white text-[#404145] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-transparent hover:text-white hover:border hover:border-white text-center w-full mt-2 inline-block">
+            Find an expert
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Expert Carousel Section -->
+  <section id="carousel" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-headline text-black mb-4 relative inline-block">
+        Meet Our Top-Rated Architecture Experts
+      </h2>
+      <p class="text-neutral-gray max-w-2xl mx-auto mt-6">
+        Connect with skilled design professionals who can bring your concepts to life.
+      </p>
+    </div>
+
+    <!-- Alpine.js Component for Experts Listing -->
+    <div class="mb-10 max-w-7xl mx-auto" x-data="{
+      activeTab: '3D Modeling &amp; Rendering',
+      currentSlide: 0,
+      slidesToShow: 4,
+      experts: {
+        '3D Modeling &amp; Rendering': [
+          {
+            name: 'Moayed Bakhsh',
+            level: 'Top Rated Seller',
+            image: 'assets/8cc861c94265c4cb5ac073d55b0c1af3.jpg',
+            rating: 4.9,
+            reviews: 591,
+            skills: [
+              'Architectural Visualization',
+              '3D Rendering'
+            ],
+            price: 39,
+            profileUrl: 'https://www.fiverr.com/moayedbakhsh'
+          },
+          {
+            name: 'Minh.son.kts',
+            level: 'Level 2',
+            image: 'assets/4a4735f5157d4373ac17d32901cc33f3.jpg',
+            rating: 4.9,
+            reviews: 551,
+            skills: [
+              'SketchUp Expert',
+              '3D Modeling'
+            ],
+            price: 20,
+            profileUrl: 'https://www.fiverr.com/minhsonkts94'
+          },
+          {
+            name: 'Huy Le',
+            level: 'Top Rated',
+            image: 'assets/03317158b2948b8db29920ff3e2ae893.jpg',
+            rating: 4.9,
+            reviews: 1000,
+            skills: [
+              '3D Modeling',
+              'Rendering'
+            ],
+            price: 67,
+            profileUrl: 'https://www.fiverr.com/lehuy_design'
+          },
+          {
+            name: 'Thanh Hoang',
+            level: 'Top Rated',
+            image: 'assets/49b1d324959442c323a0b9991f59bf78.jpg',
+            rating: 4.9,
+            reviews: 1000,
+            skills: [
+              '3D Modeling',
+              'Architectural Design'
+            ],
+            price: 38,
+            profileUrl: 'https://www.fiverr.com/tmarchteam'
+          }
+        ],
+        '2D Drawings &amp; Floor Plans': [
+          {
+            name: 'Permit Arc',
+            level: 'Level 2',
+            image: 'assets/e3902532c4d09afb77e155aac791e8fe.png',
+            rating: 4.9,
+            reviews: 37,
+            skills: [
+              'Architectural Blueprints',
+              'House Plans'
+            ],
+            price: 48,
+            profileUrl: 'https://www.fiverr.com/hamza_arc1'
+          },
+          {
+            name: 'Ender Erdem',
+            level: 'Level 2',
+            image: 'assets/50df56692c84497d419027aaf8b5c700.png',
+            rating: 4.8,
+            reviews: 128,
+            skills: [
+              'Revit Expert',
+              'AutoCAD Expert'
+            ],
+            price: 30,
+            profileUrl: 'https://www.fiverr.com/ender_erdem'
+          },
+          {
+            name: 'Omar',
+            level: 'Top Rated',
+            image: 'assets/89dd7f26a91647823f6dedea2348fe22.jpeg',
+            rating: 4.9,
+            reviews: 1300,
+            skills: [
+              'Architect',
+              'Floor Plan Designer'
+            ],
+            price: 39,
+            profileUrl: 'https://www.fiverr.com/omercad'
+          },
+          {
+            name: 'Hamza M',
+            level: 'Top Rated',
+            image: 'assets/b203226d1081bc250ff364be2b05614c.jpg',
+            rating: 4.9,
+            reviews: 837,
+            skills: [
+              'AutoCAD Expert',
+              'Revit Architect'
+            ],
+            price: 39,
+            profileUrl: 'https://www.fiverr.com/hamza__masood'
+          }
+        ],
+        'Interior Design': [
+          {
+            name: 'Kasra Sh',
+            level: 'Level 2',
+            image: 'assets/7dc34937152638779ca24ce310f5075d.jpg',
+            rating: 4.9,
+            reviews: 156,
+            skills: [
+              'Interior Designer',
+              'Rendering Expert'
+            ],
+            price: 244,
+            profileUrl: 'https://www.fiverr.com/kasrashafiee'
+          },
+          {
+            name: 'Tstudio',
+            level: 'Level 2',
+            image: 'assets/5dde48e3a2ccec11cb72dc7b7ed95b3a',
+            rating: 4.8,
+            reviews: 440,
+            skills: [
+              '3D Max Expert',
+              '3D Rendering Expert'
+            ],
+            price: 59,
+            profileUrl: 'https://www.fiverr.com/trikts'
+          },
+          {
+            name: 'Mariel N Steph',
+            level: 'Level 2',
+            image: 'assets/65cbf63f5eb1f49dd1df15647ebfe395.png',
+            rating: 4.9,
+            reviews: 848,
+            skills: [
+              '3D Rendering Expert',
+              'Interior Designer'
+            ],
+            price: 78,
+            profileUrl: 'https://www.fiverr.com/marielandsteph'
+          },
+          {
+            name: 'Gaby',
+            level: 'Top Rated',
+            image: 'assets/b1c6eb5497535ab9055a6d07d216120d.jpg',
+            rating: 5.0,
+            reviews: 254,
+            skills: [
+              'Architect',
+              'Rendering Expert'
+            ],
+            price: 244,
+            profileUrl: 'https://www.fiverr.com/studiona'
+          }
+        ],
+        'Building Engineering': [
+          {
+            name: 'Khoa Le',
+            level: 'Level 2',
+            image: 'assets/47d70e2c44b73124ba19a20a396fbee5.jpg',
+            rating: 5.0,
+            reviews: 302,
+            skills: [
+              '3D Furniture Modeling',
+              '3D Rendering'
+            ],
+            price: 19,
+            profileUrl: 'https://www.fiverr.com/le_dangkhoa'
+          },
+          {
+            name: 'Kiran',
+            level: 'Level 2',
+            image: 'assets/4af334f5e6b35c5d26e36edeb9647afb.jpeg',
+            rating: 4.8,
+            reviews: 472,
+            skills: [
+              'AutoCAD Expert',
+              'Structural Engineer'
+            ],
+            price: 20,
+            profileUrl: 'https://www.fiverr.com/kiran715'
+          },
+          {
+            name: 'Ammar Khan',
+            level: 'Level 2',
+            image: 'assets/2805668069e98ddcc53b72db4edec1e0.jpg',
+            rating: 4.9,
+            reviews: 350,
+            skills: [
+              'BIM 3D Modeling',
+              'Civil Engineer'
+            ],
+            price: 20,
+            profileUrl: 'https://www.fiverr.com/zamabbas07'
+          },
+          {
+            name: 'Mohamed Samara',
+            level: 'Top Rated',
+            image: 'assets/a83e0d0eb15353cc55e82cceff87d42f.jpeg',
+            rating: 4.8,
+            reviews: 579,
+            skills: [
+              'Building Architect',
+              'Home Designer'
+            ],
+            price: 49,
+            profileUrl: 'https://www.fiverr.com/msamara'
+          }
+        ],
+        'Landscape Design': [
+          {
+            name: 'Supun Sulochana',
+            level: 'Level 2',
+            image: 'assets/67d6e2684120e130f48d701fe753069b.jpg',
+            rating: 5.0,
+            reviews: 81,
+            skills: [
+              'Landscape Designer',
+              'Pool Design'
+            ],
+            price: 95,
+            profileUrl: 'https://www.fiverr.com/supunsulocha907'
+          },
+          {
+            name: 'Roy',
+            level: 'Level 2',
+            image: 'assets/563f1cf1a203b45a90411df558f6b966.jpg',
+            rating: 4.8,
+            reviews: 43,
+            skills: [
+              'Landscape Design'
+            ],
+            price: 95,
+            profileUrl: 'https://www.fiverr.com/redroydesigns'
+          },
+          {
+            name: 'Kat',
+            level: 'Level 2',
+            image: 'assets/a458fb36dab6c61402c65d2d6c80bacc.jpg',
+            rating: 4.9,
+            reviews: 52,
+            skills: [
+              'Landscape Design',
+              '3D Renders'
+            ],
+            price: 190,
+            profileUrl: 'https://www.fiverr.com/kathrinebridges'
+          },
+          {
+            name: 'Vin T',
+            level: 'Top Rated',
+            image: 'assets/1fe62ccab8e5f892dbec12b626398407.jpg',
+            rating: 4.8,
+            reviews: 299,
+            skills: [
+              'Home Garden Design',
+              'Pool Design'
+            ],
+            price: 143,
+            profileUrl: 'https://www.fiverr.com/vinitenk'
+          }
+        ],
+        'Architectural Planning': [
+          {
+            name: 'Dimas Aga',
+            level: 'Top Rated',
+            image: 'assets/e34c93f6be9d6941844fae52669cd210.jpeg',
+            rating: 4.9,
+            reviews: 987,
+            skills: [
+              '3D Architectural Design',
+              'Interior Rendering'
+            ],
+            price: 114,
+            profileUrl: 'https://www.fiverr.com/alvadespro'
+          },
+          {
+            name: 'Huy Le',
+            level: 'Top Rated',
+            image: 'assets/03317158b2948b8db29920ff3e2ae893.jpg',
+            rating: 4.9,
+            reviews: 1000,
+            skills: [
+              '3D Architectural Design',
+              'Interior Rendering'
+            ],
+            price: 67,
+            profileUrl: 'https://www.fiverr.com/lehuy_design'
+          },
+          {
+            name: 'Permit Arc',
+            level: 'Level 2',
+            image: 'assets/e3902532c4d09afb77e155aac791e8fe.png',
+            rating: 4.9,
+            reviews: 37,
+            skills: [
+              'Architectural Blueprints',
+              'House Plans'
+            ],
+            price: 48,
+            profileUrl: 'https://www.fiverr.com/hamza_arc1'
+          },
+          {
+            name: 'Anthony B.',
+            level: 'Top Rated',
+            image: 'assets/1f9d384dddca05c9a425ec1870819be3.JPG',
+            rating: 4.9,
+            reviews: 372,
+            skills: [
+              'Architectural Animation',
+              '3D Animation'
+            ],
+            price: 143,
+            profileUrl: 'https://www.fiverr.com/anthonybasamot'
+          }
+        ]
+      },
+      categories: [
+        { id: '3D Modeling &amp; Rendering', name: '3D Modeling &amp; Rendering' },
+        { id: '2D Drawings &amp; Floor Plans', name: '2D Drawings &amp; Floor Plans' },
+        { id: 'Interior Design', name: 'Interior Design' },
+        { id: 'Building Engineering', name: 'Building Engineering' },
+        { id: 'Landscape Design', name: 'Landscape Design' },
+        { id: 'Architectural Planning', name: 'Architectural Planning' }
+      ],
+      getCategoryUrl(categoryId) {
+        const urls = {
+          '3D Modeling &amp; Rendering': 'https://www.fiverr.com/categories/graphics-design/architectural-design-services/rendering-modeling?show_join=true&amp;source=category_tree',
+          '2D Drawings &amp; Floor Plans': 'https://www.fiverr.com/categories/graphics-design/architectural-design-services/2d-drawings?show_join=true&amp;source=category_filters',
+'Interior Design': 'https://www.fiverr.com/categories/graphics-design/architectural-design-services/interior-design?show_join=true',
+'Building Engineering': 'https://www.fiverr.com/categories/graphics-design/building-engineering?show_join=true',
+'Landscape Design': 'https://www.fiverr.com/categories/graphics-design/landscape-design?show_join=true',
+'Architectural Planning': 'https://www.fiverr.com/categories/graphics-design/architectural-design-services/planning?show_join=true'
+        };
+        return urls[categoryId] || 'https://www.fiverr.com/categories/graphics-design/architectural-design-services/rendering-modeling?source=category_tree';
+      },
+      init() {
+        // Set slidesToShow based on screen size
+        this.updateSlidesToShow();
+        window.addEventListener('resize', () => {
+          this.updateSlidesToShow();
+        });
+      },
+      updateSlidesToShow() {
+        if (window.innerWidth < 640) {
+          this.slidesToShow = 1;
+        } else if (window.innerWidth < 1024) {
+          this.slidesToShow = 2;
+        } else if (window.innerWidth < 1280) {
+          this.slidesToShow = 3;
+        } else {
+          this.slidesToShow = 4;
+        }
+      },
+      nextSlide(category) {
+        const maxSlide = this.experts[category].length - this.slidesToShow;
+        if (this.currentSlide < maxSlide) {
+          this.currentSlide++;
+        } else {
+          this.currentSlide = 0; // Loop back to start
+        }
+      },
+      prevSlide(category) {
+        const maxSlide = this.experts[category].length - this.slidesToShow;
+        if (this.currentSlide > 0) {
+          this.currentSlide--;
+        } else {
+          this.currentSlide = maxSlide; // Loop to end
+        }
+      },
+      goToSlide(index) {
+        this.currentSlide = index;
+      }
+    }" x-init="init()">
+      <!-- Tabs Navigation - Scrollable on mobile -->
+      <div class="flex flex-nowrap justify-start md:justify-center overflow-x-auto pb-2 border-b border-gray-200 hide-scrollbar">
+        <template x-for="category in categories" :key="category.id">
+<button @click="activeTab = category.id; currentSlide = 0;" data-anx-event="select_category" data-anx-props-action="filter" data-anx-props-category="category.id" :class="activeTab === category.id ? 
+                          'border-black text-black font-bold' : 
+                          'border-transparent text-gray-500 hover:text-black hover:border-gray-300'" class="px-4 md:px-6 py-3 text-sm border-b-2 transition-all duration-200 mx-1 focus:outline-none focus:ring-0 whitespace-nowrap" x-text="category.name"></button>
+        </template>
+      </div>
+
+      <!-- Carousel Content -->
+      <div class="mt-8">
+        <template x-for="category in categories" :key="category.id">
+          <div x-show="activeTab === category.id" class="relative">
+            <!-- Carousel Navigation Buttons -->
+            <div x-show="experts[category.id].length > slidesToShow" class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4 z-10">
+<button @click="prevSlide(category.id)" data-anx-event="navigate_carousel" data-anx-props-action="prev" data-anx-props-scope="experts" class="w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-black hover:bg-black hover:text-white transition-all duration-300 focus:outline-none focus:ring-0">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+              </button>
+            </div>
+
+            <div x-show="experts[category.id].length > slidesToShow" class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4 z-10">
+<button @click="nextSlide(category.id)" data-anx-event="navigate_carousel" data-anx-props-action="next" data-anx-props-scope="experts" class="w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-black hover:bg-black hover:text-white transition-all duration-300 focus:outline-none focus:ring-0">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+              </button>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="overflow-hidden">
+              <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * (100 / slidesToShow)}%)`">
+                <template x-for="(expert, index) in experts[category.id]" :key="expert.name">
+                  <!-- Expert Card Template -->
+                  <div :class="`w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 flex-shrink-0 px-3`">
+<a :href="expert.profileUrl" class="block h-full" data-anx-event="view_expert_profile" data-anx-props-action="view" data-anx-props-scope="expert_card">
+                      <div class="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 h-full flex flex-col hover:scale-[1.02]">
+                        <!-- Card Content -->
+                        <div class="p-4 md:p-5 flex flex-col h-full">
+                          <!-- Profile Section -->
+                          <div class="flex items-start mb-4">
+                            <!-- Avatar -->
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 mr-4">
+                              <img :src="expert.image" :alt="'Profile picture of ' + expert.name" class="w-full h-full rounded-full object-cover border-2 border-gray-200 shadow-md hover:scale-105 transition-transform duration-300"></div>
+
+                            <!-- Name, Level, Rating -->
+                            <div class="flex-1 min-w-0">
+                              <h3 class="text-lg font-bold text-gray-900 truncate hover:text-black transition-colors duration-300" x-text="expert.name"></h3>
+
+                              <!-- Level Badge -->
+                              <div x-show="expert.level.includes('Top Rated')" class="inline-flex items-center bg-[#FFE0B3] text-xs font-bold px-2 py-1 rounded-sm mt-1 h-[20px] w-fit">
+                                <span x-text="expert.level"></span>
+                                <div class="flex ml-1">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10" fill="currentColor" class="ml-0.5">
+                                    <path d="M4.839.22a.2.2 0 0 1 .322 0l1.942 2.636a.2.2 0 0 0 .043.043L9.782 4.84a.2.2 0 0 1 0 .322L7.146 7.105a.2.2 0 0 0-.043.043L5.161 9.784a.2.2 0 0 1-.322 0L2.897 7.148a.2.2 0 0 0-.043-.043L.218 5.163a.2.2 0 0 1 0-.322l2.636-1.942a.2.2 0 0 0 .043-.043L4.839.221Z"></path>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10" fill="currentColor" class="ml-0.5">
+                                    <path d="M4.839.22a.2.2 0 0 1 .322 0l1.942 2.636a.2.2 0 0 0 .043.043L9.782 4.84a.2.2 0 0 1 0 .322L7.146 7.105a.2.2 0 0 0-.043.043L5.161 9.784a.2.2 0 0 1-.322 0L2.897 7.148a.2.2 0 0 0-.043-.043L.218 5.163a.2.2 0 0 1 0-.322l2.636-1.942a.2.2 0 0 0 .043-.043L4.839.221Z"></path>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10" fill="currentColor" class="ml-0.5">
+                                    <path d="M4.839.22a.2.2 0 0 1 .322 0l1.942 2.636a.2.2 0 0 0 .043.043L9.782 4.84a.2.2 0 0 1 0 .322L7.146 7.105a.2.2 0 0 0-.043.043L5.161 9.784a.2.2 0 0 1-.322 0L2.897 7.148a.2.2 0 0 0-.043-.043L.218 5.163a.2.2 0 0 1 0-.322l2.636-1.942a.2.2 0 0 0 .043-.043L4.839.221Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+
+                              <div x-show="!expert.level.includes('Top Rated')" class="inline-flex items-center text-xs font-bold px-2 py-1 mt-1">
+                                <span x-text="expert.level"></span>
+                              </div>
+
+                              <!-- Rating -->
+                              <div class="flex items-center mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-black">
+                                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="ml-2 text-gray-600">
+                                  <span class="font-bold" x-text="expert.rating"></span>
+                                  <span class="text-gray-500">(<span x-text="expert.reviews"></span>)</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Skills Section -->
+                          <div class="flex-grow">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                              <template x-for="(skill, index) in expert.skills.slice(0, 2)" :key="index">
+                                <span class="inline-block bg-white border border-gray-200 text-gray-800 text-xs px-3 py-1 rounded-full line-clamp-1" x-text="skill"></span>
+                              </template>
+                            </div>
+                          </div>
+
+                          <!-- Divider -->
+                          <div class="h-px bg-gray-200 my-3"></div>
+
+                          <!-- Price and CTA -->
+                          <div class="flex justify-between items-center mt-auto">
+                            <div class="text-sm text-gray-600 font-medium">
+                              <span class="font-bold">From</span>
+                              <span class="font-bold text-black text-base">
+                                $<span x-text="expert.price"></span> </span>/project
+                            </div>
+                            <div class="inline-flex items-center justify-center px-4 py-2 border border-black text-sm font-medium rounded-md text-black hover:bg-black hover:text-white transition-colors duration-300">
+                              View profile
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div x-show="experts[category.id].length > slidesToShow" class="flex justify-center mt-6 space-x-2">
+              <template x-for="(_, index) in [...Array(Math.ceil(experts[category.id].length / slidesToShow))]" :key="index">
+<button @click="goToSlide(index)" data-anx-event="navigate_carousel" data-anx-props-action="goto" data-anx-props-slide="index" :class="currentSlide === index ? 'bg-black' : 'bg-gray-300'" class="w-2.5 h-2.5 rounded-full transition-colors duration-300 focus:outline-none focus:ring-0"></button>
+              </template>
+            </div>
+
+            <!-- Category-specific CTA Button -->
+            <div class="text-center mt-12">
+<a :href="getCategoryUrl(category.id)" data-anx-event="explore_category" data-anx-props-action="browse" data-anx-props-category="category.id" class="inline-flex items-center justify-center px-6 py-3 border border-black text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-opacity-90 transition-all duration-300 focus:outline-none focus:ring-0">
+                <span>Explore more experts</span>
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS for enhanced carousel functionality -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer=""></script>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+      }
+    });
+  </script>
+
+  <style>
+    /* Hide scrollbar but keep functionality */
+    .hide-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+
+    /* Line clamp for skills */
+    .line-clamp-1 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 1280px) {
+      .xl\:w-1\/4 {
+        width: 25%;
+      }
+    }
+
+    /* Equal height cards */
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Ensure consistent spacing */
+    .flex-grow {
+      flex-grow: 1;
+    }
+
+    /* Ensure bottom elements align */
+    .mt-auto {
+      margin-top: auto;
+    }
+
+    /* Remove focus outline and ring for all buttons */
+    button:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Remove default button styling */
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Ensure no outline appears on active/focus state */
+    .focus\:outline-none:focus {
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .focus\:ring-0:focus {
+      --tw-ring-offset-shadow: 0 0 #0000 !important;
+      --tw-ring-shadow: 0 0 #0000 !important;
+      box-shadow:
+        var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+        var(--tw-shadow, 0 0 #0000) !important;
+    }
+  </style>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Testimonials Section -->
+
+
+  <!-- How It Works Section -->
+  <section id="process" class="pt-8 pb-16 relative overflow-hidden">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="bg-white rounded-2xl p-8 md:p-12 overflow-hidden">
+      <div class="text-center mb-10">
+        <h2 class="text-headline text-black mb-4 relative inline-block">
+          How It Works
+        </h2>
+        <p class="text-neutral-gray max-w-2xl mx-auto mb-8">
+          Finding your architecture services on Fiverr is as easy as…
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 flex items-center justify-center mb-6">
+            <img src="assets/7d5d54b0a466bba154e99d9552f0586b.webp" alt="Search" class="w-10 h-10" decoding="async" style="aspect-ratio: 128 / 128">
+          </div>
+          <h3 class="text-xl font-bold text-[#404145] text-center mb-4">
+            Consult with an Expert
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Browse and select the right architectural expert. Discuss your vision and requirements to establish a clear project scope.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 flex items-center justify-center mb-6">
+            <img src="assets/93af634abb303795d8a9dc6bcc4a9179.webp" alt="Design" class="w-10 h-10" decoding="async" style="aspect-ratio: 125 / 120">
+          </div>
+          <h3 class="text-xl font-bold text-[#404145] text-center mb-4">
+            Design Development
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Your expert creates concepts based on your needs. Collaborate on revisions until the designs perfectly match your vision.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 flex items-center justify-center mb-6">
+            <img src="assets/7f004fcaf3070db7995ca160477ced58.webp" alt="Delivery" class="w-10 h-10" decoding="async" style="aspect-ratio: 128 / 110">
+          </div>
+          <h3 class="text-xl font-bold text-[#404145] text-center mb-4">
+            Final Delivery
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Receive your completed designs on time. Review the work and request any final adjustments before approval.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- Pricing Section -->
+
+
+  <!-- Tools and Technologies Section -->
+  <section id="tools" class="relative overflow-hidden">
+  <div class="container mx-auto px-4 relative z-10">
+    <!-- Tool Cards Grid - More compact with smaller images -->
+  </div>
+
+  <!-- Banner Section with updated styling -->
+  <div class="py-8 h-[400px] relative z-10 overflow-hidden bg-gradient-to-b from-[#7a2639] via-[#5e1c2c] to-[#3d121d]">
+    <!-- Dark overlay for text readability -->
+    <div class="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center h-full space-y-4">
+      <h3 class="text-[56px] font-macan text-white mb-6 relative inline-block leading-[1.2em]">
+        Got more architectural design needs?
+      </h3>
+<a href="https://www.fiverr.com/categories/graphics-design/architectural-design-services?show_join=true?source=drop_down_filters&amp;ref=seller_level%3Atop_rated_seller%2Clevel_two_seller" class="inline-flex items-center justify-center px-6 py-3 bg-white text-black border-2 border-white font-bold rounded-md transition-all duration-300 hover:bg-opacity-90 hover:scale-105" data-anx-event="explore_services" data-anx-props-action="browse" data-anx-props-scope="banner">
+        Explore more services
+      </a>
+    </div>
+  </div>
+
+  <!-- Filter Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toolCards = document.querySelectorAll(".tool-card");
+
+      // Add hover effects to tool cards
+      toolCards.forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.classList.add("shadow-xl");
+        });
+        card.addEventListener("mouseleave", function () {
+          if (!this.classList.contains("shadow-lg")) {
+            this.classList.remove("shadow-xl");
+          }
+        });
+      });
+    });
+  </script>
+</section>
+
+
+
+
+  <!-- Footer Section -->
+  <footer id="footer" class="bg-white text-neutral-gray py-12 border-t border-gray-100">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content - Categories -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <!-- Column 1: Categories -->
+        <div>
+          <h3 class="text-body font-bold text-gray-800 mb-5">Categories</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://www.fiverr.com/categories/graphics-design" class="text-body text-gray-500 hover:text-primary transition-colors">Graphics &amp; Design</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/online-marketing" class="text-body text-gray-500 hover:text-primary transition-colors">Digital Marketing</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/writing-translation" class="text-body text-gray-500 hover:text-primary transition-colors">Writing &amp; Translation</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/video-animation" class="text-body text-gray-500 hover:text-primary transition-colors">Video &amp; Animation</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/music-audio" class="text-body text-gray-500 hover:text-primary transition-colors">Music &amp; Audio</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/programming-tech" class="text-body text-gray-500 hover:text-primary transition-colors">Programming &amp; Tech</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/ai-services" class="text-body text-gray-500 hover:text-primary transition-colors">AI Services</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/consulting-services" class="text-body text-gray-500 hover:text-primary transition-colors">Consulting</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/data" class="text-body text-gray-500 hover:text-primary transition-colors">Data</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/business" class="text-body text-gray-500 hover:text-primary transition-colors">Business</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/lifestyle" class="text-body text-gray-500 hover:text-primary transition-colors">Personal Growth &amp; Hobbies</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/photography" class="text-body text-gray-500 hover:text-primary transition-colors">Photography</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/categories/finance" class="text-body text-gray-500 hover:text-primary transition-colors">Finance</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2: For Clients -->
+        <div>
+          <h3 class="text-body font-bold text-gray-800 mb-5">For Clients</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://www.fiverr.com/cp/how-fiverr-works?show_join&amp;source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">How Fiverr Works</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/cp/success-stories?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Customer Success Stories</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/trust_safety?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Trust &amp; Safety</a>
+            </li>
+            <li>
+              <a href="https://help.fiverr.com/hc/en-us/articles/25616781230481-Fiverr-s-guide-to-quality-and-trust" class="text-body text-gray-500 hover:text-primary transition-colors">Quality Guide</a>
+            </li>
+            <li>
+              <a href="https://learn.fiverr.com/" class="text-body text-gray-500 hover:text-primary transition-colors">Fiverr Learn</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/resources/guides?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Fiverr Guides</a>
+            </li>
+            <li>
+              <a href="https://answers.fiverr.com/" class="text-body text-gray-500 hover:text-primary transition-colors">Fiverr Answers</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: For Freelancers -->
+        <div>
+          <h3 class="text-body font-bold text-gray-800 mb-5">For Freelancers</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://www.fiverr.com/start_selling?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Become a Fiverr Freelancer</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/cp/apply-fiverr-agencies?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Become an Agency</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/cp/freelancer-equity-program" class="text-body text-gray-500 hover:text-primary transition-colors">Freelancer Equity Program</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/cp/kickstart-program?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Kickstart</a>
+            </li>
+            <li>
+              <a href="https://community.fiverr.com/" class="text-body text-gray-500 hover:text-primary transition-colors">Community Hub</a>
+            </li>
+            <li>
+              <a href="https://community.fiverr.com/forums/" class="text-body text-gray-500 hover:text-primary transition-colors">Forum</a>
+            </li>
+            <li>
+              <a href="https://events.fiverr.com/" class="text-body text-gray-500 hover:text-primary transition-colors">Events</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Business Solutions -->
+        <div>
+          <h3 class="text-body font-bold text-gray-800 mb-5">
+            Business Solutions
+          </h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://pro.fiverr.com/?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Fiverr Pro</a>
+            </li>
+            <li>
+              <a href="https://pro.fiverr.com/cp/project-partner?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Project Management Service</a>
+            </li>
+            <li>
+              <a href="https://www.clearvoice.com/?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">ClearVoice</a>
+              <span class="block text-xs text-gray-400">Content Marketing</span>
+            </li>
+            <li>
+              <a href="https://workingnotworking.com/?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Working Not Working</a>
+              <span class="block text-xs text-gray-400">Creative Talent</span>
+            </li>
+            <li>
+              <a href="https://www.autods.com/?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">AutoDS</a>
+              <span class="block text-xs text-gray-400">Dropshipping Tool</span>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/logo-maker?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Fiverr Logo Maker</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/fbs-contact-us?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Contact Sales</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/go?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Fiverr Go</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Company -->
+        <div>
+          <h3 class="text-body font-bold text-gray-800 mb-5">Company</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://www.fiverr.com/about-us?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">About Fiverr</a>
+            </li>
+            <li>
+              <a href="https://help.fiverr.com/hc/en-us" class="text-body text-gray-500 hover:text-primary transition-colors">Help &amp; Support</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/social-impact?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Social Impact</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/jobs?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Careers</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/legal-portal?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Terms of Service</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/legal-portal/privacy/privacy-policy?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/legal-portal/privacy/do-not-sell-my-personal-information" class="text-body text-gray-500 hover:text-primary transition-colors">Do not sell or share my personal
+                information</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/partnerships?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Partnerships</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/partnerships/creators" class="text-body text-gray-500 hover:text-primary transition-colors">Creator Network</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/partnerships/affiliates" class="text-body text-gray-500 hover:text-primary transition-colors">Affiliates</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/referral_program?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Invite a Friend</a>
+            </li>
+            <li>
+              <a href="https://www.fiverr.com/news/press-releases?source=footer" class="text-body text-gray-500 hover:text-primary transition-colors">Press &amp; News</a>
+            </li>
+            <li>
+              <a href="https://investors.fiverr.com/" class="text-body text-gray-500 hover:text-primary transition-colors">Investor Relations</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social Media and Copyright -->
+      <div class="mt-12 pt-8 border-t border-gray-100 flex justify-between items-center">
+        <div class="flex items-center justify-between w-full">
+          <div class="flex items-center">
+            <a href="https://www.fiverr.com">
+              <img src="assets/df852837e67bfdb312ac8a8d453525f0.webp" alt="Fiverr Logo" class="h-6" decoding="async" style="aspect-ratio: 291 / 87">
+            </a>
+          </div>
+
+          <div class="text-center">
+            <p class="text-xs text-gray-500">© Fiverr International Ltd. 2025</p>
+          </div>
+
+          <div class="flex space-x-6">
+            <a href="https://www.tiktok.com/@fiverr" aria-label="TikTok" class="text-gray-400 hover:text-gray-600">
+              <img src="assets/ddaa5aab9e4d40c4a7ad07cd94e9250b.svg" alt="TikTok" width="20" height="20" decoding="async" style="aspect-ratio: 24 / 24"></a>
+            <a href="https://www.instagram.com/fiverr/" aria-label="Instagram" class="text-gray-400 hover:text-gray-600">
+              <img src="assets/caee0d60ad4a3cc96ce3117009d84159.svg" alt="Instagram" width="20" height="20" decoding="async" style="aspect-ratio: 20 / 20"></a>
+            <a href="https://www.linkedin.com/company/fiverr-com" aria-label="LinkedIn" class="text-gray-400 hover:text-gray-600">
+              <img src="assets/e2018b03d7530b83bc82c17df16d49fa.svg" alt="LinkedIn" width="20" height="20" decoding="async" style="aspect-ratio: 21 / 20"></a>
+            <a href="https://www.facebook.com/Fiverr/" aria-label="Facebook" class="text-gray-400 hover:text-gray-600">
+              <img src="assets/b3b8b4a998a84b52a79c12b7d177abd5.svg" alt="Facebook" width="20" height="20" decoding="async" style="aspect-ratio: 20 / 20"></a>
+            <a href="https://www.pinterest.com/fiverr/" aria-label="Pinterest" class="text-gray-400 hover:text-gray-600">
+              <img src="assets/ad15ee3670e5206545b60a5631156362.svg" alt="Pinterest" width="20" height="20" decoding="async" style="aspect-ratio: 20 / 20"></a>
+            <a href="https://twitter.com/fiverr" aria-label="Twitter" class="text-gray-400 hover:text-gray-600">
+              <img src="assets/26050bfb6f85982f3cc0d6f2f7e77f27.svg" alt="Twitter" width="20" height="20" decoding="async" style="aspect-ratio: 20 / 20"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language Selector -->
+      <div class="mt-6 flex justify-center md:justify-end">
+        <div class="flex items-center">
+          <span class="text-xs text-gray-500 mr-2">English</span>
+          <span class="text-xs text-gray-500 mr-2">•</span>
+          <span class="text-xs text-gray-500">$ USD</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- Lucide Icons -->
+  
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+
+    // Carousel Functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector(".carousel-container > div");
+      const prevButton = document.querySelector(
+        'button[aria-label="Previous"]'
+      );
+      const nextButton = document.querySelector('button[aria-label="Next"]');
+      const slides = carousel.querySelectorAll(".flex-shrink-0");
+
+      let currentIndex = 0;
+      let slidesToShow = window.innerWidth >= 768 ? 3 : 1;
+
+      function updateCarousel() {
+        const slideWidth = slides[0].offsetWidth;
+        carousel.scrollTo({
+          left: currentIndex * slideWidth,
+          behavior: "smooth",
+        });
+      }
+
+      if (prevButton) {
+        prevButton.addEventListener("click", function () {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+          }
+        });
+      }
+
+      if (nextButton) {
+        nextButton.addEventListener("click", function () {
+          if (currentIndex < slides.length - slidesToShow) {
+            currentIndex++;
+            updateCarousel();
+          }
+        });
+      }
+
+      // Auto-scroll functionality
+      let autoScrollInterval;
+
+      function startAutoScroll() {
+        autoScrollInterval = setInterval(function () {
+          if (currentIndex < slides.length - slidesToShow) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          updateCarousel();
+        }, 5000);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+      }
+
+      // Start auto-scroll and pause on hover
+      startAutoScroll();
+
+      carousel.addEventListener("mouseenter", stopAutoScroll);
+      carousel.addEventListener("mouseleave", startAutoScroll);
+
+      // Handle window resize
+      window.addEventListener("resize", function () {
+        const newSlidesToShow = window.innerWidth >= 768 ? 3 : 1;
+        if (newSlidesToShow !== slidesToShow) {
+          slidesToShow = newSlidesToShow;
+          currentIndex = 0;
+          updateCarousel();
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+<script id="anx-script-v1">
+window.anx = {
+    init: (track, globalProps = { pagename: window.location.pathname }) => {
+        window.anx.track = track
+        requestAnimationFrame(()=> {
+            window.anx.addLinksTracking({
+                forceTarget: window.anx.opts.forceATarget
+            })
+        })
+        document.addEventListener('click', function (e) {
+            const isHref = e.target.tagName === 'A' && e.target.hasAttribute('href');
+            let target = e.target.closest('[data-anx-event]');
+            if (!target) return; // Only if element has data-anx-event
+
+            let eventName = target.getAttribute('data-anx-event');
+            let props = { ...globalProps };
+
+            // Collect all data-anx-props-* attributes
+            Array.from(target.attributes).forEach(attr => {
+            if (attr.name.startsWith('data-anx-props-')) {
+                const propName = attr.name.replace('data-anx-props-', '');
+                props[propName] = attr.value;
+            }
+            });
+
+            // Check for external link
+            const isLink = target.tagName === 'A' && target.hasAttribute('href');
+            const href = isLink ? target.getAttribute('href') : null;
+            const isExternal = isLink && href && !href.startsWith("#") && !href.includes(window.location.host) && !target.hasAttribute('target');
+
+            if (isExternal) {
+            // Prevent immediate navigation
+            e.preventDefault();
+
+            // Send event to tracker, then redirect
+            track(eventName, props);
+            setTimeout(function () {
+                window.location = href;
+            }, 300);
+            } else {
+            // Send event to tracker for non-external or other elements
+            track(eventName, props);
+            }
+        });
+    },
+    addLinksTracking: (opts = {}) => {
+        document.querySelectorAll('a[href]').forEach(a => {
+            if (opts.forceTarget){
+                if (!a.hasAttribute('target')){
+                    a.setAttribute('target', '_blank')
+                }
+            }
+            const closest = a.closest('[data-anx-event]')
+            if (closest) return
+            a.setAttribute('data-anx-event', 'link_click')
+            a.setAttribute('data-anx-props-scope', 'page')
+            a.setAttribute('data-anx-props-action', 'navigate')
+            a.setAttribute('data-anx-props-href', a.href)
+            a.setAttribute('data-anx-props-label', (a.textContent || '').substring(0, 30) )
+            
+            return;
+        })
+    }
+};
+
+window.anx.trackers = {
+    console: (...args) => console.log("event", ...args),
+    mixpanel: (...args) => mixpanel.track(...args),
+}
+
+window.anx.opts = {"forceATarget":true}
+window.anx.activeTrackers = ["mixpanel"]
+window.anx.variables = {"pageName":"architecture"}
+
+window.anx.init((...args) => {
+    window.anx.activeTrackers.forEach(tracker => {
+        window.anx.trackers[tracker](...args)
+    })
+}, window.anx.variables);
+</script></body></html>

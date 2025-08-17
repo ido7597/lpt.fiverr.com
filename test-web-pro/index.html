@@ -1,0 +1,738 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiverr Pro - Premium Web Development Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    </script>
+    
+    
+<link rel="stylesheet" href="styles.css"></head>
+<body class="font-sans">
+    <!-- Header -->
+    <header id="header" class="fixed w-full top-0 bg-white shadow-sm z-50">
+        <div class="container-custom">
+            <nav class="flex items-center justify-between h-16">
+                <a href="https://pro.fiverr.com/" class="flex-shrink-0">
+                    <img src="assets/_wp-content_uploads_sites_5_2024_01_Sub-logos.png" alt="Fiverr Pro Logo" class="h-8">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="https://pro.fiverr.com/cp/how-it-works?source=side_business_navigation" class="nav-link">Why Fiverr Pro</a>
+                    <a href="https://pro.fiverr.com/cp/about-pro-freelancers?source=side_business_navigation" class="nav-link">Services</a>
+                    <a href="https://pro.fiverr.com/fbs-contact-us" class="nav-link">Contact</a>
+                    <div class="relative">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5"></i>
+                        <input type="text" placeholder="Search services" class="pl-10 pr-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:border-primary">
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" aria-label="Menu">
+                    <i data-lucide="menu" class="h-6 w-6 text-text-primary"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="https://pro.fiverr.com/cp/how-it-works?source=side_business_navigation" class="block px-3 py-2 nav-link">Why Fiverr Pro</a>
+                <a href="https://pro.fiverr.com/cp/about-pro-freelancers?source=side_business_navigation" class="block px-3 py-2 nav-link">Services</a>
+                <a href="https://pro.fiverr.com/fbs-contact-us" class="block px-3 py-2 nav-link">Contact</a>
+                <div class="px-3 py-2">
+                    <div class="relative">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5"></i>
+                        <input type="text" placeholder="Search services" class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:border-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-16 md:pt-20 min-h-[100svh] bg-[#0A4D3C] relative overflow-hidden">
+    <div class="container-custom relative z-10">
+        <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center min-h-[calc(100svh-4rem)]">
+            <!-- Content Side -->
+            <div class="lg:col-span-7 xl:col-span-6 relative z-20">
+                <div class="p-4 sm:p-6 lg:p-0 lg:pr-8">
+                    <!-- Decorative Label - Hidden on mobile -->
+                    <div class="hidden md:inline-flex items-center gap-2 bg-emerald-400/10 px-4 py-2 rounded-full mb-8">
+                        <i data-lucide="verified" class="h-5 w-5 text-emerald-400"></i>
+                        <span class="text-emerald-400 font-medium">Verified Web Development Expertise</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 lg:mb-8 leading-tight">
+                        Access Premium
+                        <span class="relative inline-block">
+                            Web Development
+                            <div class="absolute -right-4 -top-4 hidden md:block">
+                                <i data-lucide="sparkles" class="h-8 w-8 text-emerald-400"></i>
+                            </div>
+                        </span>
+                        Talent
+                    </h1>
+
+                    <!-- Features Grid - Optimized for mobile -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6 mb-4 md:mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-emerald-400/10 p-2 rounded-lg shrink-0">
+                                <i data-lucide="shield-check" class="h-5 w-5 sm:h-6 sm:w-6 text-emerald-400"></i>
+                            </div>
+                            <p class="text-white/90 text-sm sm:text-base">SuiteDash-certified developers</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="bg-emerald-400/10 p-2 rounded-lg shrink-0">
+                                <i data-lucide="clock" class="h-5 w-5 sm:h-6 sm:w-6 text-emerald-400"></i>
+                            </div>
+                            <p class="text-white/90 text-sm sm:text-base">24/7 Premium Support</p>
+                        </div>
+                        <div class="flex items-center gap-3 sm:hidden md:flex">
+                            <div class="bg-emerald-400/10 p-2 rounded-lg shrink-0">
+                                <i data-lucide="credit-card" class="h-5 w-5 sm:h-6 sm:w-6 text-emerald-400"></i>
+                            </div>
+                            <p class="text-white/90 text-sm sm:text-base">Secure Payments</p>
+                        </div>
+                        <div class="flex items-center gap-3 sm:hidden md:flex">
+                            <div class="bg-emerald-400/10 p-2 rounded-lg shrink-0">
+                                <i data-lucide="gift" class="h-5 w-5 sm:h-6 sm:w-6 text-emerald-400"></i>
+                            </div>
+                            <p class="text-white/90 text-sm sm:text-base">5% Back in Credits</p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm sm:text-base lg:text-xl text-white/90 mb-6 md:mb-8 max-w-2xl">
+                        Connect with SuiteDash-certified web developers who deliver exceptional results. Starting from $30-$200 per hour, our flexible pricing ensures your projects stay on budget.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-12">
+                        <a href="https://pro.fiverr.com/" class="group bg-emerald-500 hover:bg-emerald-600 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold inline-flex items-center justify-center transition-all duration-300">
+                            Get Started
+                            <i data-lucide="arrow-right" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#pricing" class="group inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-xl border-2 border-white/20 text-white hover:bg-white/10 transition-all duration-300">
+                            View Pricing
+                            <i data-lucide="chevron-right" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Stats - Optimized for mobile -->
+                    <div class="grid grid-cols-2 gap-3 md:gap-8 max-w-md">
+                        <div class="bg-emerald-400/5 p-3 sm:p-4 md:p-6 rounded-xl">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-emerald-400 mb-1">$30-200</div>
+                            <div class="text-white/80 text-xs sm:text-sm md:text-base flex items-center gap-2">
+                                <i data-lucide="clock" class="h-4 w-4"></i>
+                                Per Hour
+                            </div>
+                        </div>
+                        <div class="bg-emerald-400/5 p-3 sm:p-4 md:p-6 rounded-xl">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-emerald-400 mb-1">24/7</div>
+                            <div class="text-white/80 text-xs sm:text-sm md:text-base flex items-center gap-2">
+                                <i data-lucide="headphones" class="h-4 w-4"></i>
+                                Support
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Background Elements - Now full width on all screens -->
+    <div class="absolute inset-0 w-full h-full">
+        <div class="absolute inset-0 h-full">
+            <picture class="w-full h-full block">
+                <source media="(max-width: 640px)" srcset="https://marketing-playground.livecycle.xyz/api/playgrounds/xw_j1/resources/c3wnet/raw">
+                <source media="(max-width: 1024px)" srcset="https://marketing-playground.livecycle.xyz/api/playgrounds/xw_j1/resources/mazuhh/raw">
+                <img src="assets/_api_playgrounds_xw_j1_resources_b4m036_raw" alt="Professional web development expertise" class="w-full h-full object-cover object-top">
+            </picture>
+        </div>
+    </div>
+
+    <!-- Enhanced Gradient Overlay - Adjusted for better text visibility with full-width background -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0A4D3C] via-[#0A4D3C]/80 to-[#0A4D3C]/20 sm:from-[#0A4D3C] sm:via-[#0A4D3C]/70 sm:to-transparent lg:from-[#0A4D3C] lg:via-[#0A4D3C]/60 lg:to-transparent pointer-events-none"></div>
+    
+    <!-- Decorative Elements -->
+    <div class="hidden lg:block absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBjeD0iMiIgY3k9IjIiIHI9IjIiLz48L2c+PC9zdmc+')] opacity-20"></div>
+    
+    <!-- Animated Elements -->
+    <div class="hidden lg:block absolute top-1/4 left-1/4 w-48 h-48 xl:w-64 xl:h-64 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="hidden lg:block absolute bottom-1/4 right-1/4 w-64 h-64 xl:w-96 xl:h-96 bg-emerald-500/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+    
+    <!-- Floating Elements -->
+    <div class="hidden lg:block absolute top-20 left-[20%] w-16 h-16 xl:w-20 xl:h-20 border border-emerald-500/20 rounded-full animate-pulse"></div>
+    <div class="hidden lg:block absolute bottom-32 right-[30%] w-24 h-24 xl:w-32 xl:h-32 border border-emerald-500/10 rounded-full animate-pulse" style="animation-delay: 1.5s"></div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+    <div class="container-custom">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Why Choose Fiverr Pro Web Developers</h2>
+                <h3 class="text-xl text-text-secondary mb-6">Vetted Excellence for Your Web Development Needs</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle h-6 w-6 text-primary mt-1 mr-3"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                        <span class="text-text-secondary">Access to SuiteDash-certified developers with proven expertise</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle h-6 w-6 text-primary mt-1 mr-3"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                        <span class="text-text-secondary">Secure payment system with escrow protection</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle h-6 w-6 text-primary mt-1 mr-3"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                        <span class="text-text-secondary">24/7 premium support for seamless project management</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle h-6 w-6 text-primary mt-1 mr-3"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                        <span class="text-text-secondary">Flexible pricing options ranging from $30-$200 per hour</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle h-6 w-6 text-primary mt-1 mr-3"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                        <span class="text-text-secondary">Exclusive 5% cashback in Fiverr credits</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative">
+                <img src="assets/_api_v1_image_assets_1269a57212df4631b866219ba2013fa8_c0c9d0d9998d41b98f9676bb830e443b" alt="Specialized expertise" class="rounded-lg shadow-xl">
+                <div class="absolute bottom-0 left-0 bg-primary-dark/70 text-white p-4 rounded-br-lg">
+                    <p class="text-sm">Specialized expertise in web development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding bg-background-light">
+    <div class="container-custom">
+        <!-- Top Row - Featured Items -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative h-[400px]">
+                    <img src="assets/_api_v1_image_assets_1269a57212df4631b866219ba2013fa8_dc796d824cf94b538798615e9df63d70" alt="Specialized Expertise Icon" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-text-primary mb-4">Specialized Expertise</h3>
+                    <p class="text-text-secondary">Benefit from specialized expertise tailored to your project needs, ensuring high-quality outcomes.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative h-[400px]">
+                    <img src="assets/_api_v1_image_assets_1269a57212df4631b866219ba2013fa8_b96f531527f94193aadd504d1ba272d6" alt="Streamlined Workflows Icon" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-text-primary mb-4">Streamlined Workflows</h3>
+                    <p class="text-text-secondary">Experience seamless project management with streamlined workflows and efficient processes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Row - Additional Features -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-start gap-6">
+                    <div class="bg-primary/10 rounded-lg p-4 flex-shrink-0">
+                        <img src="assets/_api_v1_image_assets_1269a57212df4631b866219ba2013fa8_31d0f677daf44a789646726b4aedf356" alt="Transparency and Control Icon" class="w-14 h-14">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-3">Transparency and Control</h3>
+                        <p class="text-text-secondary">Maintain transparency and control over your projects with detailed reporting and insights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-start gap-6">
+                    <div class="bg-primary/10 rounded-lg p-4 flex-shrink-0">
+                        <i data-lucide="gift" class="w-14 h-14 text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-3">Exclusive Rewards</h3>
+                        <p class="text-text-secondary">Earn 5% back in Fiverr credits plus enjoy waived project planning fees and premium perks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-padding bg-white">
+    <div class="container-custom">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-text-primary mb-4">Transparent Pricing for Every Project</h2>
+            <p class="text-xl text-text-secondary">Choose the pricing model that works best for your business</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Hourly Rate -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6 border-b">
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Hourly Rate</h3>
+                    <div class="text-3xl font-bold text-primary mb-2">$30-$200<span class="text-lg text-text-secondary">/hour</span></div>
+                    <p class="text-text-secondary">Best for: Ongoing projects and flexible scope</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Flexible time commitment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Regular progress updates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Easy scope adjustment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Direct communication</span>
+                        </li>
+                    </ul>
+                    <a href="https://pro.fiverr.com/" class="btn-primary block text-center">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Project Based -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6 border-b">
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Project-Based</h3>
+                    <div class="text-3xl font-bold text-primary mb-2">$150-$2,500+<span class="text-lg text-text-secondary">/project</span></div>
+                    <p class="text-text-secondary">Best for: Defined scope projects</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Clear deliverables</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Fixed timeline</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Milestone payments</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Complete project management</span>
+                        </li>
+                    </ul>
+                    <a href="https://pro.fiverr.com/" class="btn-primary block text-center">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Custom Enterprise -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6 border-b">
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Custom Enterprise</h3>
+                    <div class="text-3xl font-bold text-primary mb-2">Contact for pricing</div>
+                    <p class="text-text-secondary">Best for: Complex, large-scale projects</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Dedicated support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Custom solutions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Priority service</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-primary mr-3"></i>
+                            <span class="text-text-secondary">Advanced security options</span>
+                        </li>
+                    </ul>
+                    <a href="https://pro.fiverr.com/fbs-contact-us" class="btn-primary block text-center">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-background-light">
+    <div class="container-custom">
+        <div class="text-center mb-16">
+            <span class="text-primary font-medium mb-4 inline-block">Client Testimonials</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-text-primary">What Our Clients Say</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-6">
+                    <img src="assets/_image_upload_f_auto,q_auto,t_profile_original_v1_attachments_profile_photo_543cc36449119b05cb004dc58e0ae23c-1718046081713_dbeae154-98d2-4fa7-90ad-eab792521972.jpeg" alt="Abisoye" class="w-16 h-16 rounded-full object-cover border-2 border-primary/10">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">Abisoye</h3>
+                        <span class="inline-block bg-background-light text-text-secondary px-3 py-1 rounded-full text-sm mb-2">Web Development</span>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <i data-lucide="quote" class="absolute -left-2 -top-2 h-8 w-8 text-primary/10 -z-10"></i>
+                    <p class="text-text-secondary text-lg mb-4 relative z-10">"For small tasks, this is an excellent service. I have had great success with tech issues and help, and it was extremely easy, fast, and super affordable."</p>
+                    <div class="flex items-center gap-2 text-sm text-primary">
+                        <i data-lucide="check-circle" class="h-4 w-4"></i>
+                        <span>Verified by Fiverr</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-6">
+                    <img src="assets/_image_upload_f_auto,q_auto,t_profile_original_v1_attachments_profile_photo_f5266b063afd7dc057123abdb18c36bb-1584446392985_026b71f3-9c0a-4188-bad1-70abb4243e40.jpg" alt="Gulshan Pal" class="w-16 h-16 rounded-full object-cover border-2 border-primary/10">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">Gulshan Pal</h3>
+                        <span class="inline-block bg-background-light text-text-secondary px-3 py-1 rounded-full text-sm mb-2">Technical Implementation</span>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <i data-lucide="quote" class="absolute -left-2 -top-2 h-8 w-8 text-primary/10 -z-10"></i>
+                    <p class="text-text-secondary text-lg mb-4 relative z-10">"Verified reviews highlight the efficiency and affordability of Fiverr Pro services, making it a preferred choice for many."</p>
+                    <div class="flex items-center gap-2 text-sm text-primary">
+                        <i data-lucide="check-circle" class="h-4 w-4"></i>
+                        <span>Verified by Fiverr</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section-padding">
+    <div class="container-custom">
+        <h2 class="text-4xl font-bold text-text-primary text-center mb-16">Awards and Certifications</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center justify-items-center mb-16">
+            <img src="assets/_api_playgrounds_rZu50_assets_5ff17c0401d73804.webp" alt="SuiteDash Certification Badge" class="w-20 h-20 rounded-full object-cover transform hover:scale-110 transition-transform duration-300">
+            
+            <img src="assets/_api_playgrounds_rZu50_assets_acab6dae96f0b455.webp" alt="Stevie Awards Trophy" class="w-20 h-20 rounded-full object-cover transform hover:scale-110 transition-transform duration-300">
+            
+            <img src="assets/_api_playgrounds_rZu50_assets_e114ab9745b1e548.webp" alt="Million Dollar Achievement Badge" class="w-20 h-20 rounded-full object-cover transform hover:scale-110 transition-transform duration-300">
+            
+            <img src="assets/_api_playgrounds_rZu50_assets_2f07c971cad9314c.webp" alt="Quality Assurance Seal" class="w-20 h-20 rounded-full object-cover transform hover:scale-110 transition-transform duration-300">
+            
+            <img src="assets/_api_playgrounds_rZu50_assets_da6e19c77465f55c.webp" alt="G2 Leader Badge" class="w-20 h-20 rounded-full object-cover transform hover:scale-110 transition-transform duration-300">
+            
+            <img src="assets/_api_playgrounds_rZu50_assets_01ed11c4c3021f26.webp" alt="G2 High Performer Badge" class="w-20 h-20 rounded-full object-cover transform hover:scale-110 transition-transform duration-300">
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-text-primary mb-3">SuiteDash Certified Expert</h3>
+                <p class="text-text-secondary">Official certification for business software expertise</p>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Gold Stevie Award Winner</h3>
+                <p class="text-text-secondary">International Business Services Excellence</p>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-text-primary mb-3">Quality Assured Service</h3>
+                <p class="text-text-secondary">PCI DSS certified secure platform</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding bg-background-light relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+    
+    <div class="container-custom relative">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-primary font-semibold mb-4 inline-block">Got Questions?</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">Frequently Asked Questions</h2>
+            <p class="text-text-secondary">Find answers to common questions about Fiverr Pro's web development services</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <button class="faq-toggle w-full text-left px-6 py-4 focus:outline-none" aria-expanded="false">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-medium text-text-primary">What is Fiverr Certified?</h4>
+                            <div class="transform transition-transform duration-300">
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-primary"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <div class="px-6 pb-4">
+                            <p class="text-text-secondary">Fiverr Certified is our premium platform connecting businesses with certified freelance experts. All web developers undergo rigorous vetting and must maintain high performance standards to retain their certification.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <button class="faq-toggle w-full text-left px-6 py-4 focus:outline-none" aria-expanded="false">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-medium text-text-primary">Will the freelancer be committed to my business's NDA?</h4>
+                            <div class="transform transition-transform duration-300">
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-primary"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <div class="px-6 pb-4">
+                            <p class="text-text-secondary">Yes, Fiverr Pro freelancers can sign NDAs to protect your intellectual property. Our platform supports secure document signing and legally binding agreements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <button class="faq-toggle w-full text-left px-6 py-4 focus:outline-none" aria-expanded="false">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-medium text-text-primary">How does Fiverr protect us in the order process?</h4>
+                            <div class="transform transition-transform duration-300">
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-primary"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <div class="px-6 pb-4">
+                            <p class="text-text-secondary">We provide comprehensive protection through our PCI DSS certified payment system. Payments are held in escrow and only released upon your approval of the delivered work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <button class="faq-toggle w-full text-left px-6 py-4 focus:outline-none" aria-expanded="false">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-medium text-text-primary">How are projects priced on Fiverr Pro?</h4>
+                            <div class="transform transition-transform duration-300">
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-primary"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <div class="px-6 pb-4">
+                            <p class="text-text-secondary">Projects are priced either hourly ($30-$200 per hour) or per project ($150-$2,500+), depending on scope and requirements. All prices are clearly stated upfront with no hidden fees.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <button class="faq-toggle w-full text-left px-6 py-4 focus:outline-none" aria-expanded="false">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-medium text-text-primary">What support is available during my project?</h4>
+                            <div class="transform transition-transform duration-300">
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-primary"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <div class="px-6 pb-4">
+                            <p class="text-text-secondary">You have access to 24/7 customer support, direct communication with your developer, and a dedicated project management team if needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-text-secondary mb-4">Still have questions?</p>
+                <a href="https://pro.fiverr.com/fbs-contact-us" class="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors">
+                    Contact our support team
+                    <i data-lucide="arrow-right" class="h-4 w-4 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('[data-lucide="chevron-down"]');
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
+                    // Close all other FAQs
+                    faqToggles.forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            otherToggle.setAttribute('aria-expanded', 'false');
+                            otherToggle.nextElementSibling.style.maxHeight = '0';
+                            otherToggle.querySelector('[data-lucide="chevron-down"]').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    if (!isExpanded) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.style.maxHeight = '0';
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="section-padding bg-[#722F37] text-white">
+    <div class="container-custom text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Start Your Project with Verified Web Development Experts</h2>
+        <p class="text-xl mb-8">Join thousands of businesses saving time and money with Fiverr Pro</p>
+        <div class="max-w-2xl mx-auto mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center justify-center md:justify-end">
+                    <ul class="text-left space-y-3">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-white mr-3"></i>
+                            <span>Access to SuiteDash-certified developers</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-white mr-3"></i>
+                            <span>Secure payment protection</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center justify-center md:justify-start">
+                    <ul class="text-left space-y-3">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-white mr-3"></i>
+                            <span>24/7 premium support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="h-5 w-5 text-white mr-3"></i>
+                            <span>Exclusive 5% cashback in credits</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a href="https://pro.fiverr.com/" class="btn-primary inline-block bg-white text-[#722F37] hover:bg-gray-200">Hire a Pro Developer</a>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-background-dark text-white pt-16 pb-8">
+        <div class="container-custom">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://pro.fiverr.com/careers" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="https://pro.fiverr.com/press" class="text-gray-400 hover:text-white transition-colors">Press &amp; News</a></li>
+                        <li><a href="https://pro.fiverr.com/partnerships" class="text-gray-400 hover:text-white transition-colors">Partnerships</a></li>
+                        <li><a href="https://pro.fiverr.com/legal-portal/privacy/privacy-policy?source=footer" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://pro.fiverr.com/legal-portal?source=footer" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://help-pro.fiverr.com/hc/en-us" class="text-gray-400 hover:text-white transition-colors">Help &amp; Support</a></li>
+                        <li><a href="https://pro.fiverr.com/trust" class="text-gray-400 hover:text-white transition-colors">Trust &amp; Safety</a></li>
+                        <li><a href="https://pro.fiverr.com/quality" class="text-gray-400 hover:text-white transition-colors">Quality Guide</a></li>
+                        <li><a href="https://pro.fiverr.com/fbs-contact-us" class="text-gray-400 hover:text-white transition-colors">Contact Sales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://pro.fiverr.com/cp/success-stories?source=side_business_navigation" class="text-gray-400 hover:text-white transition-colors">Customer Success Stories</a></li>
+                        <li><a href="https://pro.fiverr.com/community" class="text-gray-400 hover:text-white transition-colors">Community Hub</a></li>
+                        <li><a href="https://pro.fiverr.com/forum" class="text-gray-400 hover:text-white transition-colors">Forum</a></li>
+                        <li><a href="https://pro.fiverr.com/events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="https://pro.fiverr.com/blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Business Solutions -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Business Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://pro.fiverr.com/business" class="text-gray-400 hover:text-white transition-colors">About Business Solutions</a></li>
+                        <li><a href="https://pro.fiverr.com/" class="text-gray-400 hover:text-white transition-colors">Fiverr Pro</a></li>
+                        <li><a href="https://pro.fiverr.com/certified" class="text-gray-400 hover:text-white transition-colors">Fiverr Certified</a></li>
+                        <li><a href="https://pro.fiverr.com/agency" class="text-gray-400 hover:text-white transition-colors">Become an Agency</a></li>
+                        <li><a href="https://pro.fiverr.com/fbs-contact-us" class="text-gray-400 hover:text-white transition-colors">Contact Sales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Follow Us -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.tiktok.com/@fiverr" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="video" class="h-6 w-6"></i>
+                        </a>
+                        <a href="https://www.instagram.com/fiverr/" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="h-6 w-6"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/fiverr-com" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="h-6 w-6"></i>
+                        </a>
+                        <a href="https://www.facebook.com/Fiverr/" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/fiverr/" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="image" class="h-6 w-6"></i>
+                        </a>
+                        <a href="https://twitter.com/fiverr" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2024 Fiverr Pro. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="https://pro.fiverr.com/legal-portal/privacy/privacy-policy?source=footer" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="https://pro.fiverr.com/legal-portal?source=footer" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="https://www.fiverr.com/pages/cookie-policy" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body></html>

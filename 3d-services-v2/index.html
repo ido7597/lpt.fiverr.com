@@ -1,0 +1,1723 @@
+<!DOCTYPE html><html lang="en" style="scroll-behavior: smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiverr 3D Services - Professional 3D Modeling &amp; Rendering</title>
+
+  <style type="text/css">
+@font-face {
+      font-family: "Macan";
+      src: url("assets/_assets_uploads_macan-bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+@font-face {
+      font-family: "Macan";
+      src: url("assets/_assets_uploads_macan-regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+@font-face {
+      font-family: "Macan";
+      src: url("assets/_assets_uploads_macan-semibold.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <!-- Tailwind CSS -->
+  
+
+  
+
+  
+<link rel="stylesheet" href="styles-8a49299aa77b79e29c7344cdb77c766c.css">
+    <script>
+      window.lucide = {
+        createIcons: ()=>{}
+      }
+    </script>
+  </head>
+
+<body class="font-macan text-body bg-white">
+  <!-- Header Section -->
+  <header id="header" class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="https://www.fiverr.com" class="flex items-center space-x-2 text-2xl font-bold text-primary transition-transform duration-300 hover:scale-105">
+          <img src="assets/_tmp_image-IOLV5W_jo9xglj1bx.webp" alt="Fiverr Logo" class="h-10" decoding="async" style="aspect-ratio: 291 / 87">
+        </a>
+
+        <!-- Navigation - Desktop -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="https://www.fiverr.com" class="text-neutral-gray hover:text-primary font-medium transition-colors duration-300 relative group">
+            Home
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#features" class="text-neutral-gray hover:text-primary font-medium transition-colors duration-300 relative group">
+            Services
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#carousel" class="text-neutral-gray hover:text-primary font-medium transition-colors duration-300 relative group">
+            Our Experts
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#process" class="text-neutral-gray hover:text-primary font-medium transition-colors duration-300 relative group">
+            How It Works
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+
+
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center space-x-4">
+<a href="https://www.fiverr.com/join" class="btn-primary flex items-center space-x-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+<span>Join</span>
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-neutral-gray hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Menu">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu (Hidden by default) -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 rounded-lg bg-white shadow-lg overflow-hidden transition-all duration-300">
+        <nav class="flex flex-col">
+          <a href="https://www.fiverr.com" class="text-neutral-gray hover:text-white hover:bg-primary px-4 py-3 transition-colors duration-200">Home</a>
+          <a href="#features" class="text-neutral-gray hover:text-white hover:bg-primary px-4 py-3 transition-colors duration-200">Services</a>
+          <a href="#carousel" class="text-neutral-gray hover:text-white hover:bg-primary px-4 py-3 transition-colors duration-200">Our Experts</a>
+          <a href="#process" class="text-neutral-gray hover:text-white hover:bg-primary px-4 py-3 transition-colors duration-200">How It Works</a>
+          
+        </nav>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+
+          // Change icon based on menu state
+          const icon = menuButton.querySelector("i,svg");
+          if (mobileMenu.classList.contains("hidden")) {
+            icon.setAttribute("data-lucide", "menu");
+          } else {
+            icon.setAttribute("data-lucide", "x");
+          }
+          lucide.createIcons();
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (event.target?.closest && (event.target.closest("#mobile-menu-toggle") || event.target.closest("#mobile-menu"))) {
+            return;
+          }
+          mobileMenu.classList.add("hidden");
+          const icon = menuButton.querySelector("i,svg");
+          icon.setAttribute("data-lucide", "menu");
+          lucide.createIcons();
+        });
+
+        // Add scroll effect to header
+        const header = document.getElementById("header");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 10) {
+            header.classList.add("py-2");
+            header.classList.add("shadow-lg");
+          } else {
+            header.classList.remove("py-2");
+            header.classList.remove("shadow-lg");
+          }
+        });
+      });
+    </script>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative overflow-hidden text-white bg-primary-dark">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mr-32 -mt-32 z-10"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-pink opacity-5 rounded-full -ml-48 -mb-48 z-10"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary opacity-5 rounded-full blur-3xl z-10">
+    </div>
+
+    <!-- Background image (desktop only) - reduced height -->
+    <div class="absolute top-0 bottom-0 right-0 w-1/2 md:w-3/5 z-0 hidden md:block">
+      <img src="assets/_tmp_image-IedGeQ_w9q4ozxqmg.webp" alt="Professional 3D designer working on a laptop with 3D modeling software" class="object-cover w-full h-full max-h-[500px]" decoding="async" style="aspect-ratio: 1200 / 800">
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-gradient-to-l from-transparent via-primary-dark/40 to-primary-dark"></div>
+    </div>
+
+    <!-- Add subtle animated particles for visual interest -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-10">
+      <div class="particle absolute w-2 h-2 rounded-full bg-primary opacity-20"></div>
+      <div class="particle absolute w-3 h-3 rounded-full bg-accent-pink opacity-20"></div>
+      <div class="particle absolute w-1 h-1 rounded-full bg-white opacity-30"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-20 py-8 md:py-16">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-fade-in">
+          Expert 3D Modeling &amp; Rendering on Fiverr
+        </h1>
+
+        <p class="text-gray-300 text-xl mb-8 max-w-xl leading-relaxed">
+          Access a global network of talented freelancers offering
+          photorealistic visualizations, customized solutions, and fast
+          delivery to meet your unique project needs.
+        </p>
+
+        <div class="flex flex-wrap gap-5 mb-8">
+          <a href="#features" class="bg-primary hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center shadow-lg shadow-primary/30 transform hover:translate-y-[-2px]">
+            Explore 3D Services Now
+            <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+          <a href="#carousel" class="text-white hover:text-white font-medium py-4 px-8 flex items-center transition-all duration-300 border border-gray-500 hover:border-white rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/10">
+            <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Meet Our Experts
+          </a>
+        </div>
+
+        <!-- Mobile-only image - reduced height -->
+        <div class="md:hidden w-full mb-8 rounded-lg overflow-hidden shadow-xl">
+          <div class="relative">
+            <img src="assets/_tmp_image-myapJN_xioh4zzdhvr.webp" alt="Professional 3D designer working on a laptop with 3D modeling software" class="w-full h-auto max-h-[300px] object-cover" decoding="async" style="aspect-ratio: 1200 / 800">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 to-transparent"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <style>
+      @keyframes float {
+
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+
+        50% {
+          transform: translate(20px, -20px);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <script>
+      // Simple animation for particles
+      document.addEventListener("DOMContentLoaded", function () {
+        const particles = document.querySelectorAll(".particle");
+
+        particles.forEach((particle, index) => {
+          // Random starting positions
+          const x = Math.random() * 100;
+          const y = Math.random() * 100;
+
+          // Apply random animations
+          particle.style.left = `${x}%`;
+          particle.style.top = `${y}%`;
+          particle.style.animation = `float ${5 + index * 2
+            }s ease-in-out infinite`;
+          particle.style.animationDelay = `${index * 0.5}s`;
+        });
+      });
+    </script>
+  </section>
+
+  <!-- Key Features Section -->
+  <section id="features" class="py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mr-32 -mt-32"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-pink opacity-5 rounded-full -ml-48 -mb-48"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-[#003912] mb-4 relative inline-block">
+        Explore Fiverr's 3D Services
+        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#1DBF73] rounded-full"></span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+        Discover talented 3D designers across various specializations to bring
+        your creative vision to life.
+      </p>
+    </div>
+
+    <!-- 3D Services Categories Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 3D Architecture Card -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96">
+        <img src="assets/_tmp_image-OhPvcg_who1bjzf8nj.webp" alt="3D Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 330 / 220">
+
+        <!-- Color Overlay - Changes opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#003912] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="bg-[#1DBF73] text-white text-xs font-bold px-3 py-1.5 rounded-full">3D Architecture</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <div class="flex items-center mb-3">
+            <img src="assets/_tmp_image-Y2fiai_cra2lvsfxoi.webp" alt="Dimas Aga" class="w-8 h-8 rounded-full border-2 border-white" decoding="async" style="aspect-ratio: 50 / 50">
+            <span class="text-white text-sm ml-2">Created by <span class="font-bold">Dimas Aga</span></span>
+          </div>
+          <p class="text-white text-sm mb-4">Transform your architectural concepts into stunning photorealistic visualizations. Our experts create detailed 3D renderings of buildings, interiors, and landscapes that bring your designs to life with precision and artistry.</p>
+          <a href="https://www.fiverr.com/categories/graphics-design/architectural-design-services/rendering-modeling?source=category_tree" class="bg-white text-[#003912] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-[#1DBF73] hover:text-white text-center w-full mt-2">
+            Explore More Talent
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D Industrial Design Card -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96">
+        <img src="assets/_tmp_image-1N9Y7k_e27l46p9w4d.webp" alt="3D Industrial Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 330 / 220">
+
+        <!-- Color Overlay - Changes opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#003912] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="bg-[#1DBF73] text-white text-xs font-bold px-3 py-1.5 rounded-full">3D Industrial Design</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <div class="flex items-center mb-3">
+            <img src="assets/_tmp_image-BzamCK_q2o8dvd6lv.webp" alt="Sam" class="w-8 h-8 rounded-full border-2 border-white" decoding="async" style="aspect-ratio: 50 / 50">
+            <span class="text-white text-sm ml-2">Created by <span class="font-bold">Sam</span></span>
+          </div>
+          <p class="text-white text-sm mb-4">Elevate your product design with professional 3D industrial modeling. From concept to prototype, our experts create detailed, functional models with precise specifications for manufacturing, marketing, or presentation purposes.</p>
+          <a href="https://www.fiverr.com/categories/graphics-design/product-design-services/3d-modeling-rendering?source=category_tree" class="bg-white text-[#003912] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-[#1DBF73] hover:text-white text-center w-full mt-2">
+            Explore More Talent
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D Characters Card -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96">
+        <img src="assets/_tmp_image-z6NKz1_t3b3hv2fmii.webp" alt="3D Characters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 330 / 220">
+
+        <!-- Color Overlay - Changes opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#003912] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="bg-[#1DBF73] text-white text-xs font-bold px-3 py-1.5 rounded-full">3D Characters</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <div class="flex items-center mb-3">
+            <img src="assets/_tmp_image-EoQtTe_llz3z343j3f.webp" alt="Vladislav" class="w-8 h-8 rounded-full border-2 border-white" decoding="async" style="aspect-ratio: 50 / 50">
+            <span class="text-white text-sm ml-2">Created by <span class="font-bold">Vladislav</span></span>
+          </div>
+          <p class="text-white text-sm mb-4">Bring your characters to life with expert 3D modeling. Whether for games, animations, or 3D printing, our artists create expressive, detailed characters with personality, from stylized cartoons to photorealistic humans.</p>
+          <a href="https://www.fiverr.com/categories/graphics-design/character-modeling?source=category_tree" class="bg-white text-[#003912] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-[#1DBF73] hover:text-white text-center w-full mt-2">
+            Explore More Talent
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D Landscape Card -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96">
+        <img src="assets/_tmp_image-pODIhp_q30skxcggna.webp" alt="3D Landscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 330 / 220">
+
+        <!-- Color Overlay - Changes opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#003912] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="bg-[#1DBF73] text-white text-xs font-bold px-3 py-1.5 rounded-full">3D Landscape</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <div class="flex items-center mb-3">
+            <img src="assets/_tmp_image-2kBCgj_erep13yltps.webp" alt="Archteriorbd" class="w-8 h-8 rounded-full border-2 border-white" decoding="async" style="aspect-ratio: 50 / 50">
+            <span class="text-white text-sm ml-2">Created by <span class="font-bold">Archteriorbd</span></span>
+          </div>
+          <p class="text-white text-sm mb-4">Create breathtaking outdoor environments with professional 3D landscape design. Our experts craft realistic terrains, gardens, and natural settings with attention to lighting, textures, and botanical details.</p>
+          <a href="https://www.fiverr.com/categories/graphics-design/landscape-design/3d-modeling-rendering?source=category_tree" class="bg-white text-[#003912] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-[#1DBF73] hover:text-white text-center w-full mt-2">
+            Explore More Talent
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D Game Art Card -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96">
+        <img src="assets/_tmp_image-3afKym_1q2iwi82dr2.webp" alt="3D Game Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 330 / 220">
+
+        <!-- Color Overlay - Changes opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#003912] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="bg-[#1DBF73] text-white text-xs font-bold px-3 py-1.5 rounded-full">3D Game Art</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <div class="flex items-center mb-3">
+            <img src="assets/_tmp_image-09qsZU_1sfd97meo8.webp" alt="Pogwitch" class="w-8 h-8 rounded-full border-2 border-white" decoding="async" style="aspect-ratio: 50 / 50">
+            <span class="text-white text-sm ml-2">Created by <span class="font-bold">Pogwitch</span></span>
+          </div>
+          <p class="text-white text-sm mb-4">Level up your game with professional 3D assets. From characters and environments to props and weapons, our game art specialists create optimized, game-ready models with textures that enhance player experience.</p>
+          <a href="https://www.fiverr.com/categories/graphics-design/buy/game-art<a href=" https:="" www.fiverr.com="" categories="" graphics-design="" buy="" game-art="" 3d?source="category_tree&amp;ref=game_dimension%3A3d&quot;" class="bg-white text-[#003912] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-[#1DBF73] hover:text-white text-center w-full mt-2">
+            Explore More Talent
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D Jewelry Design Card -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl h-96">
+        <img src="assets/_tmp_image-wr8Y5g_0l9h31tbno9.webp" alt="3D Jewelry Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" decoding="async" style="aspect-ratio: 330 / 220">
+
+        <!-- Color Overlay - Changes opacity on hover -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#003912] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90"></div>
+
+        <!-- Category Badge - Always visible but shifts position -->
+        <div class="absolute top-4 left-4 transition-transform duration-500 group-hover:translate-y-2">
+          <span class="bg-[#1DBF73] text-white text-xs font-bold px-3 py-1.5 rounded-full">3D Jewelry Design</span>
+        </div>
+
+        <!-- Content that appears on hover -->
+        <div class="absolute inset-0 flex flex-col justify-end p-6 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <div class="flex items-center mb-3">
+            <img src="assets/_tmp_image-DH4Rch_e3u2looq0tt.webp" alt="Suryono" class="w-8 h-8 rounded-full border-2 border-white" decoding="async" style="aspect-ratio: 50 / 50">
+            <span class="text-white text-sm ml-2">Created by <span class="font-bold">Suryono</span></span>
+          </div>
+          <p class="text-white text-sm mb-4">Craft exquisite jewelry designs with precision 3D modeling. Our experts create detailed CAD models ready for production, with realistic renders showcasing gemstones, metals, and intricate details for custom pieces.</p>
+          <a href="https://www.fiverr.com/categories/graphics-design/jewelry-design/3d-modeling-rendering?source=category_tree" class="bg-white text-[#003912] text-sm font-bold py-3 px-4 rounded-md transition-all duration-300 hover:bg-[#1DBF73] hover:text-white text-center w-full mt-2">
+            Explore More Talent
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
+
+  <style>
+    .bg-grid-pattern {
+      background-image: radial-gradient(#1dbf73 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+  </style>
+</section>
+
+
+
+
+
+
+  <!-- Expert Carousel Section -->
+  <section id="carousel" class="py-16 bg-gradient-to-br from-primary-dark to-black text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-subheadline text-white mb-4 relative inline-block">
+          Meet Our Top-Rated 3D Experts
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
+        </h2>
+        <p class="text-gray-300 max-w-2xl mx-auto">
+          Connect with skilled professionals who can bring your 3D vision to
+          life with precision and creativity across various specializations.
+        </p>
+      </div>
+
+      <!-- Category Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10" x-data="{ activeCategory: 'all' }">
+        <button @click="activeCategory = 'all'" :class="activeCategory === 'all' ? 'bg-primary text-white' : 'bg-gray-800 text-gray-300 hover:bg-primary hover:text-white'" class="px-4 py-2 rounded-full font-medium transition-all duration-300">
+          All Categories
+        </button>
+        <button @click="activeCategory = '3D Architecture'" :class="activeCategory === '3D Architecture' ? 'bg-primary text-white' : 'bg-gray-800 text-gray-300 hover:bg-primary hover:text-white'" class="px-4 py-2 rounded-full font-medium transition-all duration-300">
+          Architecture
+        </button>
+        <button @click="activeCategory = '3D Industrial Design'" :class="activeCategory === '3D Industrial Design' ? 'bg-primary text-white' : 'bg-gray-800 text-gray-300 hover:bg-primary hover:text-white'" class="px-4 py-2 rounded-full font-medium transition-all duration-300">
+          Industrial Design
+        </button>
+        <button @click="activeCategory = '3D Characters'" :class="activeCategory === '3D Characters' ? 'bg-primary text-white' : 'bg-gray-800 text-gray-300 hover:bg-primary hover:text-white'" class="px-4 py-2 rounded-full font-medium transition-all duration-300">
+          Characters
+        </button>
+        <button @click="activeCategory = '3D Landscape'" :class="activeCategory === '3D Landscape' ? 'bg-primary text-white' : 'bg-gray-800 text-gray-300 hover:bg-primary hover:text-white'" class="px-4 py-2 rounded-full font-medium transition-all duration-300">
+          Landscape
+        </button>
+        <button @click="activeCategory = '3D Game Art'" :class="activeCategory === '3D Game Art' ? 'bg-primary text-white' : 'bg-gray-800 text-gray-300 hover:bg-primary hover:text-white'" class="px-4 py-2 rounded-full font-medium transition-all duration-300">
+          Game Art
+        </button>
+        <button @click="activeCategory = '3D Jewelry Design'" :class="activeCategory === '3D Jewelry Design' ? 'bg-primary text-white' : 'bg-gray-800 text-gray-300 hover:bg-primary hover:text-white'" class="px-4 py-2 rounded-full font-medium transition-all duration-300">
+          Jewelry Design
+        </button>
+      </div>
+
+      <div class="relative" x-data="{ 
+         currentIndex: 0, 
+         slidesToShow: window.innerWidth >= 768 ? 3 : 1,
+         slideWidth: 100 / (window.innerWidth >= 768 ? 3 : 1),
+         autoScrollInterval: null,
+         touchStartX: 0,
+         touchEndX: 0,
+         activeCategory: 'all',
+         experts: [
+           // 3D Architecture
+           {
+             name: 'Rabia A',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_2049ce7272c04c32be019eea0bef4b6d-1730136401159_1d131320-bb33-4c5f-9d08-22bbc02fe0fb.jpg',
+             rating: 5.0,
+             title: '3D Architectural Designer',
+             category: '3D Architecture',
+             testimonial: 'I will do 3d architectural design exterior interior rendering house commercial modeling',
+             profileUrl: 'https://www.fiverr.com/rabiaashraf627',
+             level: 'Level 2',
+             reviews: 26,
+             price: '€19'
+           },
+           {
+             name: 'Nguyen Huy',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_688877ca10a76b93b79f688cd00ab893-1628865563583_1666ff9c-4c8a-4692-8ba1-910764f21a28.jpg',
+             rating: 4.9,
+             title: '3D Architectural Renderer',
+             category: '3D Architecture',
+             testimonial: 'I will professional 3d rendering architecture with high quality',
+             profileUrl: 'https://www.fiverr.com/anhhuycreative',
+             level: 'Top Rated',
+             reviews: 303,
+             price: '€42'
+           },
+           {
+             name: 'Dimas Aga',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_c4540ca23011df07c38fc8f286406e27-1595903935744_23e53901-67a9-44af-8788-01938d9b809c.jpeg',
+             rating: 4.8,
+             title: 'Interior Designer',
+             category: '3D Architecture',
+             testimonial: 'I will do interior design for bedroom, bathroom, kitchen, living, cafe, restaurant, etc',
+             profileUrl: 'https://www.fiverr.com/alvadespro',
+             level: 'Top Rated',
+             reviews: 230,
+             price: '€110'
+           },
+           {
+             name: 'Xuan Trung',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_f1219034d48311d2893eb567cdc88961-1713462674738_d108dad2-5cbf-4961-96ac-185ea700231a.jpg',
+             rating: 4.9,
+             title: 'Interior Designer &amp; Renderer',
+             category: '3D Architecture',
+             testimonial: 'I will interior design and realistic 3d rendering',
+             profileUrl: 'https://www.fiverr.com/xuantrung02',
+             level: 'Level 2',
+             reviews: 180,
+             price: '€42'
+           },
+           {
+             name: 'Sobia',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_14356cc07fa2ec62e1eb41e2c92b27e2-1733638250905_1b4bc6c4-cb29-4656-8982-89b324cacef1.jpg',
+             rating: 4.9,
+             title: '3D Exterior Designer',
+             category: '3D Architecture',
+             testimonial: 'I will do 3d exterior render, design for homes, commercial building in sketchup',
+             profileUrl: 'https://www.fiverr.com/saiqa_malik2',
+             level: 'Fiverr\'s Choice',
+             reviews: 68,
+             price: '€10'
+           },
+           
+           // 3D Industrial Design
+           {
+             name: 'Zain Ul Abdeen',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_d76c42f87ff44b86b1774fb9c8a746c3-1723720781239_d41ae693-d60b-4680-a85c-9e3679bd6a99.png',
+             rating: 4.8,
+             title: 'CFD &amp; FEA Analyst',
+             category: '3D Industrial Design',
+             testimonial: 'I will do cfd and fea analysis projects on ansys and solidworks',
+             profileUrl: 'https://www.fiverr.com/simugenix',
+             level: 'Level 1',
+             reviews: 28,
+             price: '€138'
+           },
+           {
+             name: 'Hasan',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_838ae839b0adc1750136545aba3aa304-1727375572376_281ec4dd-0a24-4eb8-9a85-0485260e7e8f.jpg',
+             rating: 4.9,
+             title: '3D Product Renderer',
+             category: '3D Industrial Design',
+             testimonial: 'I will do 3d product rendering and animation',
+             profileUrl: 'https://www.fiverr.com/hasan_kuet',
+             level: 'Level 1',
+             reviews: 234,
+             price: '€46'
+           },
+           {
+             name: 'Sam',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_89a773c5886198610a6ac9fdc78d952d-1681453974393_fc98647c-7166-4b69-9c29-c32840000e80.jpeg',
+             rating: 5.0,
+             title: '3D Product Modeler',
+             category: '3D Industrial Design',
+             testimonial: 'I will do 3d modeling and realistic rendering of your product',
+             profileUrl: 'https://www.fiverr.com/aninest',
+             level: 'Top Rated',
+             reviews: 834,
+             price: '€129'
+           },
+           {
+             name: 'Hakimur Rahman',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_f60951f2ce4410fcef06690acacb79e5-1709781921505_827d7ca4-b0a6-4efb-a4f2-b39ced376ff9.jpg',
+             rating: 4.9,
+             title: 'CAD Designer',
+             category: '3D Industrial Design',
+             testimonial: 'I will create manufacturing cad design and 3d product rendering',
+             profileUrl: 'https://www.fiverr.com/hakim1210',
+             level: 'Level 2',
+             reviews: 68,
+             price: '€46'
+           },
+           {
+             name: 'Praveen',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_16fe44be7703a5f14f2021f18f9a9ea3-1721292550349_6020d72d-694f-40d2-986e-9e2ddd2a33e9.png',
+             rating: 4.9,
+             title: '3D Product Renderer',
+             category: '3D Industrial Design',
+             testimonial: 'I will do realistic 3d product rendering and mockup designs',
+             profileUrl: 'https://www.fiverr.com/cgatelier',
+             level: 'Fiverr\'s Choice',
+             reviews: 365,
+             price: '€28'
+           },
+           
+           // 3D Characters
+           {
+             name: 'Anis Sasongko',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_aa6bb5a81fddf4ae661ddfaf3d85a11f-1697483921740_a21e7eb3-9b78-454a-a536-906716937e99.jpeg',
+             rating: 4.9,
+             title: '3D Character Sculptor',
+             category: '3D Characters',
+             testimonial: 'Create sculpting 3D character models for printing and rendering in blender',
+             profileUrl: 'https://www.fiverr.com/sasongkoanis',
+             level: 'Top Rated',
+             reviews: 11,
+             price: '€321'
+           },
+           {
+             name: 'Sirius Studios',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_aed7c4cc6ac2a2299f2e3a39143dc1d3-1724072772488_a367dfa0-71c0-4701-b5fe-b2e23c45d53e.png',
+             rating: 4.8,
+             title: '3D Figurine Designer',
+             category: '3D Characters',
+             testimonial: 'Our agency will make premium 3D printable figurines and print and color them',
+             profileUrl: 'https://www.fiverr.com/agencies/siriusanimation',
+             level: 'Vetted Pro',
+             reviews: 24,
+             price: '€688'
+           },
+           {
+             name: 'Vladislav',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_064195bf539091a96ad16e8020b8fc18-1718103983909_5f1e0210-6dbf-4c2c-a8de-d2c26a029e7f.jpg',
+             rating: 4.9,
+             title: '3D Character Artist',
+             category: '3D Characters',
+             testimonial: 'Create an amazing quality stylized or realistic 3D character for you',
+             profileUrl: 'https://www.fiverr.com/vladzislav',
+             level: 'Level 2',reviews: 125,
+             price: '€275'
+           },
+           {
+             name: 'Koushik Keen',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_487815ff259098815c86592d5a1c2fc3-1572890156655_7680d7bd-ba9b-4cab-b99c-595779f1abcf.png',
+             rating: 4.8,
+             title: '3D Character Modeler',
+             category: '3D Characters',
+             testimonial: 'Do 3D character modeling for you',
+             profileUrl: 'https://www.fiverr.com/kd_boy',
+             level: 'Level 2',
+             reviews: 86,
+             price: '€55'
+           },
+           {
+             name: 'Jacob Olsson',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_712211c12136d977e4f62021d3f7be59-1712603002125_a26ec6fa-9682-422f-ae7c-de91c28d9e5c.jfif',
+             rating: 4.8,
+             title: '3D Printing Specialist',
+             category: '3D Characters',
+             testimonial: 'Make high quality 3D models for 3D printing',
+             profileUrl: 'https://www.fiverr.com/jacoboolsson',
+             level: 'Level 2',
+             reviews: 86,
+             price: '€55'
+           },
+           
+           // 3D Landscape
+           {
+             name: 'Archteriorbd',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_71217b6fda63a1bf16abea0a2dba8bda-1624329126516_d5e64797-edc8-4124-88ff-2c2b81a808f1.jpg',
+             rating: 4.8,
+             title: 'Landscape Designer',
+             category: '3D Landscape',
+             testimonial: 'I will design backyard front yard garden pool patio deck terrace 3d landscape rendering',
+             profileUrl: 'https://www.fiverr.com/archteriorbd',
+             level: 'Level 2',
+             reviews: 213,
+             price: '€46'
+           },
+           {
+             name: 'Al Hosna',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_227a5c1e2db1d154278caeb723eea61c-1660862132432_7072a213-1787-4a3d-8420-f9aeebebd54c.jpg',
+             rating: 5.0,
+             title: '3D Modeler &amp; Renderer',
+             category: '3D Landscape',
+             testimonial: 'I will do 3d modeling and exterior architectural rendering using sketchup and lumion',
+             profileUrl: 'https://www.fiverr.com/alhosna',
+             level: 'Level 2',
+             reviews: 2,
+             price: '€28'
+           },
+           {
+             name: 'Hashira',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_6f723a4e757fc6b78d3315eb83f0b582-1595959341768_c6009824-d379-4a9f-ae15-e1a80567414f.jpg',
+             rating: 4.9,
+             title: 'Landscape Designer',
+             category: '3D Landscape',
+             testimonial: 'I will design backyard, garden, patio, pool, landscape, renovations, and render 3ds',
+             profileUrl: 'https://www.fiverr.com/hashi27',
+             level: 'Fiverr\'s Choice',
+             reviews: 228,
+             price: '€207'
+           },
+           
+           // 3D Game Art
+           {
+             name: 'Egi S',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_c303597daa29c2854379d809f18ac3d4-1665972871410_33961f4e-5361-42bf-9941-0b9d77ce76a4.jpg',
+             rating: 5.0,
+             title: '3D Hair Artist',
+             category: '3D Game Art',
+             testimonial: 'I will do professional realtime 3d hair creation for games',
+             profileUrl: 'https://www.fiverr.com/giseti',
+             level: 'Level 2',
+             reviews: 6,
+             price: '€55'
+           },
+           {
+             name: 'Vtuber Graphics',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_0d287fef528103cf5d8b943fe9bfd51c-1653555616816_d91809de-3514-43ce-9be7-44f5be9d4a97.png',
+             rating: 4.9,
+             title: 'VTuber Designer',
+             category: '3D Game Art',
+             testimonial: 'I will create custom vr chat avatar, vr character or 3d vtuber for you',
+             profileUrl: 'https://www.fiverr.com/vtuber_graphics',
+             level: 'Level 2',
+             reviews: 23,
+             price: '€88'
+           },
+           {
+             name: 'Mamunur Rashid',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_78fa234fd4a2881f5c3e31dd87d3aa4f-1627575521643_8c870e24-0e03-4aa7-8586-70a520d9252c.jpg',
+             rating: 4.9,
+             title: '3D Modeler &amp; Texturer',
+             category: '3D Game Art',
+             testimonial: 'I will create 3d modeling and texturing for atc and msfs',
+             profileUrl: 'https://www.fiverr.com/arcmamun',
+             level: 'Level 2',
+             reviews: 8,
+             price: '€459'
+           },
+           {
+             name: 'Usama Ahmed',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_5565743775e07cef71b57683aa22cd18-1646123409712_4c62b755-2819-4971-a26f-d1d9421e80f5.jpg',
+             rating: 4.9,
+             title: 'Metaverse Designer',
+             category: '3D Game Art',
+             testimonial: 'I will create environment for metaverse and VR',
+             profileUrl: 'https://www.fiverr.com/usamaahmed215',
+             level: 'Level 1',
+             reviews: 8,
+             price: '€74'
+           },
+           {
+             name: 'Pogwitch',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_283d08898bea2b81d29cece603272a8e-1739899892928_76785959-e2bc-4e15-87b0-1c4d9fc340eb.jpg',
+             rating: 4.9,
+             title: 'Low Poly 3D Modeler',
+             category: '3D Game Art',
+             testimonial: 'I will 3d model any low poly model for your game',
+             profileUrl: 'https://www.fiverr.com/pogwitch',
+             level: 'Fiverr\'s Choice',
+             reviews: 393,
+             price: '€23'
+           },
+           
+           // 3D Jewelry Design
+           {
+             name: 'Suryono',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_9035a9c33393a996b61a12c5a716323d-1662427899423_f7a0f899-ea05-4be5-897d-ebf751c9ced6.jpg',
+             rating: 5.0,
+             title: 'Jewelry CAD Designer',
+             category: '3D Jewelry Design',
+             testimonial: 'I will design jewelry 3d cad for 3d printing and 360 render',
+             profileUrl: 'https://www.fiverr.com/suryono888',
+             level: 'Level 2',
+             reviews: 687,
+             price: '€28'
+           },
+           {
+             name: 'Abdullah Rashid',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_1035392c8658fe5c9cb06a7d06a7a8a0-1671980217632_a88874a6-a758-44ef-94ad-f6f3d503c292.jpg',
+             rating: 5.0,
+             title: 'Jewelry CAD Designer',
+             category: '3D Jewelry Design',
+             testimonial: 'I will do custom jewellery cad design for 3d printing and rendering',
+             profileUrl: 'https://www.fiverr.com/abdullahrash981',
+             level: 'Level 2',
+             reviews: 37,
+             price: '€10'
+           },
+           {
+             name: 'Hassan Shaikh',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_e467c6a1b115a13c133146612d04193f-1646999688938_9ed54a00-82bd-492b-a075-3838acc40257.JPG',
+             rating: 4.9,
+             title: 'Jewelry CAD Designer',
+             category: '3D Jewelry Design',
+             testimonial: 'I will do 3d cad designs for jewelry',
+             profileUrl: 'https://www.fiverr.com/dd4567',
+             level: 'Level 1',
+             reviews: 67,
+             price: '€37'
+           },
+           {
+             name: 'Vimu',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_96b5245625a31b6404b460489e1ece16-1719817823217_b1343bc9-a5ce-4c25-a05b-c0a35a3dd8ec.JPG',
+             rating: 4.9,
+             title: 'Jewelry Designer',
+             category: '3D Jewelry Design',
+             testimonial: 'I will create elegant 3d jewelry designs in stl 3dm specialized in custom work',
+             profileUrl: 'https://www.fiverr.com/solidexpertsl',
+             level: 'Level 2',
+             reviews: 161,
+             price: '€14'
+           },
+           {
+             name: 'Hassan',
+             image: 'assets/_t_profile_thumb_q_auto_f_auto_attachments_profile_photo_bf0d77301074f0fb308dd940868c5b25-1621190982110_004c91c9-e6ba-4a95-a5a9-2e34655e4bb8.jpg',
+             rating: 4.9,
+             title: 'Jewelry CAD Designer',
+             category: '3D Jewelry Design',
+             testimonial: 'I will design any type of 3d cad jewelry and render it',
+             profileUrl: 'https://www.fiverr.com/h3djeweldesign',
+             level: 'Fiverr\'s Choice',
+             reviews: 1000,
+             price: '€46'
+           }
+         ]
+       }" x-init="
+         // Define filteredExperts computed property
+         filteredExperts = activeCategory === 'all' ? experts : experts.filter(expert => expert.category === activeCategory);
+         
+         // Watch for category changes
+         $watch('activeCategory', value => {
+           filteredExperts = value === 'all' ? experts : experts.filter(expert => expert.category === value);
+           currentIndex = 0; // Reset to first slide when category changes
+         });
+         
+         $watch('currentIndex', value => {
+           if (value < 0) currentIndex = 0;
+           if (value > filteredExperts.length - slidesToShow) currentIndex = Math.max(0, filteredExperts.length - slidesToShow);
+         });
+         
+         startAutoScroll = () => {
+           autoScrollInterval = setInterval(() => {
+             if (currentIndex < filteredExperts.length - slidesToShow) {
+               currentIndex++;
+             } else {
+               currentIndex = 0;
+             }
+           }, 5000);
+         };
+         
+         stopAutoScroll = () => {
+           clearInterval(autoScrollInterval);
+         };
+         
+         startAutoScroll();
+         
+         window.addEventListener('resize', () => {
+           const newSlidesToShow = window.innerWidth >= 768 ? 3 : 1;
+           if (newSlidesToShow !== slidesToShow) {
+             slidesToShow = newSlidesToShow;
+             slideWidth = 100 / slidesToShow;
+             currentIndex = 0;
+           }
+         });
+       " @mouseenter="stopAutoScroll()" @mouseleave="startAutoScroll()" @touchstart="touchStartX = $event.changedTouches[0].screenX; stopAutoScroll()" @touchend="
+         touchEndX = $event.changedTouches[0].screenX;
+         if (touchEndX < touchStartX - 50 &amp;&amp; currentIndex < filteredExperts.length - slidesToShow) {
+           currentIndex++;
+         } else if (touchEndX > touchStartX + 50 &amp;&amp; currentIndex > 0) {
+           currentIndex--;
+         }
+         startAutoScroll();
+       ">
+        <!-- Carousel Navigation - Left -->
+        <button class="absolute -left-4 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white rounded-full p-3 shadow-lg hidden md:flex items-center justify-center hover:bg-opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" aria-label="Previous" @click="currentIndex > 0 ? currentIndex-- : null">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        </button>
+
+        <!-- Carousel Container -->
+        <div class="carousel-container overflow-hidden">
+          <div class="flex gap-6 transition-transform duration-500 ease-in-out" x-bind:style="`transform: translateX(-${currentIndex * slideWidth}%)`">
+            <!-- Expert Cards (Generated with Alpine.js) -->
+            <template x-for="(expert, index) in filteredExperts" :key="index">
+              <div class="min-w-full sm:min-w-[350px] md:min-w-0 md:w-1/3 flex-shrink-0" x-bind:style="`width: ${slideWidth}%`">
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group h-full">
+                  <div class="relative h-full">
+                    <div class="absolute inset-0 bg-primary opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity duration-300">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                      <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                          
+                          <div class="ml-4">
+                            <h3 class="text-lg font-bold text-white" x-text="expert.name"></h3>
+                            <div class="flex items-center mt-1">
+                              <template x-for="i in Math.floor(expert.rating)" :key="i">
+                                <svg class="text-yellow-400 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                              </template>
+                              <template x-if="expert.rating % 1 !== 0">
+                                <svg class="text-yellow-400 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18.338a2.1 2.1 0 0 0-.987.244L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16l2.309-4.679A.53.53 0 0 1 12 2"></path></svg>
+                              </template>
+                              <span class="ml-2 text-gray-300 text-sm" x-text="expert.rating"></span>
+                              <span class="ml-1 text-gray-400 text-xs" x-text="`(${expert.reviews})`"></span>
+                            </div>
+                          </div><img :src="expert.image" :alt="`Profile picture of ${expert.name}`" class="w-16 h-16 rounded-full object-cover border-2 border-primary"></div>
+                      </div>
+
+                      <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="inline-block bg-primary bg-opacity-20 text-primary text-xs font-semibold px-3 py-1 rounded-full" x-text="expert.title"></span>
+                        <span class="inline-block bg-gray-700 text-gray-200 text-xs font-semibold px-3 py-1 rounded-full" x-text="expert.level"></span>
+                      </div>
+
+                      <div class="mb-2">
+                        <span class="text-white font-bold" x-text="expert.price"></span>
+                        <span class="text-gray-400 text-sm">starting price</span>
+                      </div>
+
+                      <p class="text-gray-300 text-sm mb-6 line-clamp-3" x-text="expert.testimonial"></p>
+
+                      <div class="flex justify-center mt-auto relative z-20">
+                        <a :href="expert.profileUrl" class="inline-flex items-center justify-center px-4 py-2 border border-primary text-sm font-medium rounded-md text-white bg-primary-dark hover:bg-primary transition-colors duration-300 w-full">
+                          View Profile
+                          <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation - Right -->
+        <button class="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white rounded-full p-3 shadow-lg hidden md:flex items-center justify-center hover:bg-opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" aria-label="Next" @click="currentIndex < filteredExperts.length - slidesToShow ? currentIndex++ : null">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+      </div>
+
+      <!-- Carousel Indicators -->
+      <div class="flex justify-center mt-8 space-x-2">
+        <template x-for="(_, index) in Array.from({ length: Math.ceil(filteredExperts.length / slidesToShow) })" :key="index" x-show="index < Math.ceil(filteredExperts.length / slidesToShow)">
+          <button class="w-3 h-3 rounded-full transition-colors duration-300" :class="Math.floor(currentIndex / slidesToShow) === index ? 'bg-primary' : 'bg-gray-600 hover:bg-primary'" :aria-label="`Go to slide ${index + 1}`" @click="currentIndex = index * slidesToShow"></button>
+        </template>
+      </div>
+
+      <!-- Explore More Button -->
+      <div class="text-center mt-10">
+        <a href="https://www.fiverr.com/categories/graphics-design/3d-modeling-rendering" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary shadow-sm hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 group">
+          Explore More Talent
+          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer=""></script>
+  </section>
+
+  <!-- Testimonials Section -->
+
+
+  <!-- How It Works Section -->
+  <section id="process" class="py-16 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mr-32 -mt-32"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-pink opacity-5 rounded-full -ml-48 -mb-48"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-subheadline text-primary-dark mb-4 relative inline-block">
+          How It Works
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
+        </h2>
+        <p class="text-neutral-gray max-w-2xl mx-auto mt-4">
+          Get started with our 3D services in three simple steps. Our
+          streamlined process makes it easy to bring your vision to life.
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Connection line -->
+        <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-100 transform -translate-y-1/2 z-0">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+          <!-- Step 1 -->
+          <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary">
+            <div class="flex flex-col items-center">
+              <div class="w-20 h-20 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:bg-opacity-20 transition-all duration-300">
+                <span class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">1</span>
+                <svg class="text-primary w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold text-primary-dark text-center mb-4 group-hover:text-primary transition-colors duration-300">
+                Search for a Service
+              </h3>
+              <p class="text-neutral-gray text-center">
+                Explore Fiverr's extensive catalog of 3D modeling and
+                rendering services. Use filters to narrow down options based
+                on your specific requirements, budget, and timeline.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary md:mt-8">
+            <div class="flex flex-col items-center">
+              <div class="w-20 h-20 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:bg-opacity-20 transition-all duration-300">
+                <span class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">2</span>
+                <svg class="text-primary w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold text-primary-dark text-center mb-4 group-hover:text-primary transition-colors duration-300">
+                Place Your Order
+              </h3>
+              <p class="text-neutral-gray text-center">
+                Select the perfect freelancer for your project by reviewing
+                their portfolio, ratings, and client feedback. Communicate
+                your requirements clearly and place your order with
+                confidence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl p-8 transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary">
+            <div class="flex flex-col items-center">
+              <div class="w-20 h-20 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:bg-opacity-20 transition-all duration-300">
+                <span class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">3</span>
+                <svg class="text-primary w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold text-primary-dark text-center mb-4 group-hover:text-primary transition-colors duration-300">
+                Review and Approve
+              </h3>
+              <p class="text-neutral-gray text-center">
+                Receive your 3D model or rendering within the agreed
+                timeframe. Review the work, request revisions if needed, and
+                approve the final delivery when you're completely satisfied.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href="#carousel" class="btn-primary inline-flex items-center justify-center group">
+          Explore Expert Profiles
+          <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+
+
+  <!-- Tools and Technologies Section -->
+  <section id="tools" class="py-16 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mr-32 -mt-32"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-pink opacity-5 rounded-full -ml-48 -mb-48"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-8">
+        <h2 class="text-subheadline text-primary-dark mb-4 relative inline-block">
+          Tools and Technologies Used
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
+        </h2>
+        <p class="text-neutral-gray max-w-3xl mx-auto">
+          Fiverr's 3D modeling and rendering experts utilize industry-standard
+          software and cutting-edge technologies to deliver exceptional
+          results. Whether you need architectural visualization, product
+          design, character modeling, or animation, our freelancers have the
+          tools and expertise to bring your vision to life.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button class="filter-btn active px-4 py-2 rounded-full bg-primary text-white font-medium transition-all duration-300 hover:shadow-md">
+          All Tools
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-primary-dark border border-gray-200 font-medium transition-all duration-300 hover:border-primary hover:shadow-md">
+          Modeling
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-primary-dark border border-gray-200 font-medium transition-all duration-300 hover:border-primary hover:shadow-md">
+          Rendering
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-primary-dark border border-gray-200 font-medium transition-all duration-300 hover:border-primary hover:shadow-md">
+          CAD
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-primary-dark border border-gray-200 font-medium transition-all duration-300 hover:border-primary hover:shadow-md">
+          Animation
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Tool 1 - Blender -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-E0QGuh_1ce70smdq3r.webp" alt="Blender Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 683 / 888">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            Blender
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Free and open-source 3D creation software used for modeling,
+            sculpting, texturing, rendering, and animation.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Modeling</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Animation</span>
+          </div>
+        </div>
+
+        <!-- Tool 2 - Maya -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-wv1t2v_ytj8g3k92jk.webp" alt="Maya Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 400 / 400">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            Maya
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Industry-standard 3D animation software used for modeling,
+            simulation, and rendering.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Modeling</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Animation</span>
+          </div>
+        </div>
+
+        <!-- Tool 3 - 3ds Max -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-mFHFkW_klox1ccoq0r.webp" alt="3ds Max Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 3840 / 2160">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            3ds Max
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Professional 3D modeling and rendering software for creating
+            stunning visualizations and animations.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Modeling</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Rendering</span>
+          </div>
+        </div>
+
+        <!-- Tool 4 - Cinema 4D -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-ZOVADv_t9zvebx6xle.webp" alt="Cinema 4D Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 1920 / 1932">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            Cinema 4D
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Versatile 3D modeling program used for creating complex
+            architectural renderings and character designs.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Modeling</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Animation</span>
+          </div>
+        </div>
+
+        <!-- Tool 5 - AutoCAD -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-m38dLU_vfdgonflwk.webp" alt="AutoCAD Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 2560 / 802">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            AutoCAD
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Precision design software used for 3D CAD modeling and 2D
+            technical drawings.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">CAD</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Technical</span>
+          </div>
+        </div>
+
+        <!-- Tool 6 - Fusion 360 -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-LNstrf_23c6xc2k6tp.webp" alt="Fusion 360 Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 1278 / 630">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            Fusion 360
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Integrated CAD, CAM, and CAE software for product design and
+            manufacturing.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">CAD</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Product
+              Design</span>
+          </div>
+        </div>
+
+        <!-- Tool 7 - KeyShot -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-3t13QY_h39p361juua.webp" alt="KeyShot Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 1024 / 1024">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            KeyShot
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Real-time 3D rendering software that produces photorealistic
+            imagery with minimal setup time.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Rendering</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Visualization</span>
+          </div>
+        </div>
+
+        <!-- Tool 8 - Solidworks -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-ciAmXh_ll9qcerxmqk.webp" alt="Solidworks Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 1600 / 1000">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            Solidworks
+          </h3>
+          <p class="text-neutral-gray text-center">
+            3D CAD software for precision engineering and product design.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">CAD</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Engineering</span>
+          </div>
+        </div>
+
+        <!-- Tool 9 - SketchUp -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div><img src="assets/_wikipedia_commons_4_4e_SketchUp_Logo_2020.svg" alt="SketchUp Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 537 / 109"></div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            SketchUp
+          </h3>
+          <p class="text-neutral-gray text-center">
+            User-friendly 3D modeling software popular for architectural and
+            interior design visualization.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Modeling</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Architecture</span>
+          </div>
+        </div>
+
+        <!-- Tool 10 - Lumion -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-QRw1lL_v9cw7stymsf.webp" alt="Lumion Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 300 / 168">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            Lumion
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Real-time 3D rendering software that transforms CAD models into
+            stunning visualizations.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Rendering</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Architecture</span>
+          </div>
+        </div>
+
+        <!-- Tool 11 - V-Ray -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-V53kkU_edkxe19s1ol.webp" alt="V-Ray Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 1320 / 640">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            V-Ray
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Industry-leading rendering engine known for creating
+            photorealistic images with accurate lighting.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Rendering</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Photorealistic</span>
+          </div>
+        </div>
+
+        <!-- Tool 12 - D5 Render -->
+        <div class="tool-card group bg-white rounded-xl shadow-sm hover:shadow-xl p-6 transition-all duration-300 border border-transparent hover:border-primary transform hover:-translate-y-1">
+          <div class="relative mb-6 overflow-hidden rounded-lg">
+            <img src="assets/_tmp_image-vPIxn5_h5z5v6dxkq7.webp" alt="D5 Render Logo" class="w-full h-32 object-contain transition-transform duration-500 group-hover:scale-110" decoding="async" style="aspect-ratio: 677 / 131">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark text-center mb-3 group-hover:text-primary transition-colors duration-300">
+            D5 Render
+          </h3>
+          <p class="text-neutral-gray text-center">
+            Real-time architectural visualization software for creating
+            stunning interior and exterior designs.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold">Rendering</span>
+            <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 rounded-full text-primary text-xs font-semibold ml-2">Architecture</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- View More Button -->
+      <div class="mt-12 text-center">
+        <a href="https://www.fiverr.com/categories/graphics-design/3d-modeling-rendering" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary shadow-sm hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 group">
+          Explore All 3D Tools
+          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Filter Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const toolCards = document.querySelectorAll(".tool-card");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) =>
+              btn.classList.remove("active", "bg-primary", "text-white")
+            );
+            filterButtons.forEach((btn) =>
+              btn.classList.add(
+                "bg-white",
+                "text-primary-dark",
+                "border",
+                "border-gray-200"
+              )
+            );
+
+            // Add active class to clicked button
+            this.classList.add("active", "bg-primary", "text-white");
+            this.classList.remove(
+              "bg-white",
+              "text-primary-dark",
+              "border",
+              "border-gray-200"
+            );
+
+            const filter = this.textContent.trim().toLowerCase();
+
+            // Show all cards if "All Tools" is selected
+            if (filter === "all tools") {
+              toolCards.forEach((card) => {
+                card.style.display = "block";
+                setTimeout(() => {
+                  card.style.opacity = "1";
+                  card.style.transform = "translateY(0)";
+                }, 10);
+              });
+              return;
+            }
+
+            // Filter cards based on category
+            toolCards.forEach((card) => {
+              const categories = card.querySelectorAll(".inline-block");
+              let matchFound = false;
+
+              categories.forEach((category) => {
+                if (category.textContent.trim().toLowerCase() === filter) {
+                  matchFound = true;
+                }
+              });
+
+              if (matchFound) {
+                card.style.display = "block";
+                setTimeout(() => {
+                  card.style.opacity = "1";
+                  card.style.transform = "translateY(0)";
+                }, 10);
+              } else {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                setTimeout(() => {
+                  card.style.display = "none";
+                }, 300);
+              }
+            });
+          });
+        });
+
+        // Add hover effects to tool cards
+        toolCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.classList.add("shadow-xl");
+          });
+          card.addEventListener("mouseleave", function () {
+            if (!this.classList.contains("shadow-lg")) {
+              this.classList.remove("shadow-xl");
+            }
+          });
+        });
+      });
+    </script>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="bg-white text-neutral-gray py-12 relative overflow-hidden border-t border-gray-100">
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Main Footer Content - Two Rows Layout -->
+      <div class="flex flex-col space-y-10">
+        <!-- Top Row: Logo, Social Media, and Primary Links -->
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
+          <!-- Logo and Social Media -->
+          <div class="lg:w-1/4">
+            <a href="https://www.fiverr.com" class="inline-block mb-6">
+              <img src="assets/_tmp_image-G6g0mq_b7sa395glyb.webp" alt="Fiverr Logo" class="h-10" decoding="async" style="aspect-ratio: 291 / 87">
+            </a>
+            <p class="text-neutral-gray mb-6">
+              Access a global network of talented freelancers offering
+              professional 3D modeling and rendering services to bring your vision
+              to life.
+            </p>
+
+            <!-- Social Media Icons -->
+            <div class="flex flex-wrap gap-3">
+              <a href="https://www.tiktok.com/@fiverr" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="TikTok">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="9" y2="9"></line><line x1="4" x2="20" y1="15" y2="15"></line><line x1="10" x2="8" y1="3" y2="21"></line><line x1="16" x2="14" y1="3" y2="21"></line></svg>
+              </a>
+              <a href="https://www.instagram.com/fiverr/" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Instagram">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/fiverr-com" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+              </a>
+              <a href="https://www.facebook.com/fiverr" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Facebook">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+              </a>
+              <a href="https://twitter.com/fiverr" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Twitter">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Three Link Columns -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:w-3/4">
+            <!-- Column 1: 3D Modeling Services -->
+            <div>
+              <h3 class="text-lg font-bold text-primary-dark mb-4 flex items-center">
+                <i data-lucide="cube" class="text-primary w-5 h-5 mr-2"></i>
+                3D Modeling Services
+              </h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="https://www.fiverr.com/categories/graphics-design/3d-models-product-design" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>3D Product Modeling</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/categories/graphics-design/3d-architecture-landscape" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>3D Architectural Visualization</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/categories/graphics-design/3d-modeling-rendering" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>3D Character Modeling</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/categories/video-animation/3d-animation" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>3D Animation</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/categories/graphics-design/3d-modeling-rendering" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Technical 3D Modeling</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Resources -->
+            <div>
+              <h3 class="text-lg font-bold text-primary-dark mb-4 flex items-center">
+                <svg class="text-primary w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>
+                Resources
+              </h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="https://www.fiverr.com/pages/how-it-works" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>How It Works</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/resources/guides" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Fiverr Blog</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://community.fiverr.com/" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Fiverr Community</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/business" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Fiverr Business</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/pro" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Fiverr Pro</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Support -->
+            <div>
+              <h3 class="text-lg font-bold text-primary-dark mb-4 flex items-center">
+                <svg class="text-primary w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+                Support
+              </h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="https://www.fiverr.com/support" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Help &amp; Support</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/pages/trust-safety" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Trust &amp; Safety</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/start-selling" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Selling on Fiverr</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/resources/guides/buying" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Buying on Fiverr</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.fiverr.com/support/contact-us" class="text-neutral-gray hover:text-primary transition-colors flex items-center group">
+                    <svg class="w-4 h-4 mr-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    <span>Contact Us</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Row: Copyright and Legal Links -->
+        <div class="pt-6 border-t border-gray-200">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-6 md:mb-0">
+              <svg class="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path></svg>
+              <p class="text-sm text-gray-500">
+                2025 Fiverr International Ltd. All rights reserved.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6">
+              <a href="https://www.fiverr.com/terms-of-service" class="text-sm text-gray-500 hover:text-primary transition-colors">Terms of Service</a>
+              <a href="https://www.fiverr.com/privacy-policy" class="text-sm text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="https://www.fiverr.com/cookie-policy" class="text-sm text-gray-500 hover:text-primary transition-colors">Cookie Policy</a>
+              <a href="https://www.fiverr.com/accessibility-statement" class="text-sm text-gray-500 hover:text-primary transition-colors">Accessibility Statement</a>
+            </div>
+          </div>
+
+          <!-- Back to top button -->
+          <div class="flex justify-center mt-8">
+            <a href="#header" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-md" aria-label="Back to top">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Lucide Icons -->
+  
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    
+    // Carousel Functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector(".carousel-container > div");
+      const prevButton = document.querySelector(
+        'button[aria-label="Previous"]'
+      );
+      const nextButton = document.querySelector('button[aria-label="Next"]');
+      const slides = carousel.querySelectorAll(".flex-shrink-0");
+
+      let currentIndex = 0;
+      let slidesToShow = window.innerWidth >= 768 ? 3 : 1;
+
+      function updateCarousel() {
+        const slideWidth = slides[0].offsetWidth;
+        carousel.scrollTo({
+          left: currentIndex * slideWidth,
+          behavior: "smooth",
+        });
+      }
+
+      if (prevButton) {
+        prevButton.addEventListener("click", function () {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+          }
+        });
+      }
+
+      if (nextButton) {
+        nextButton.addEventListener("click", function () {
+          if (currentIndex < slides.length - slidesToShow) {
+            currentIndex++;
+            updateCarousel();
+          }
+        });
+      }
+
+      // Auto-scroll functionality
+      let autoScrollInterval;
+
+      function startAutoScroll() {
+        autoScrollInterval = setInterval(function () {
+          if (currentIndex < slides.length - slidesToShow) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          updateCarousel();
+        }, 5000);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+      }
+
+      // Start auto-scroll and pause on hover
+      startAutoScroll();
+
+      carousel.addEventListener("mouseenter", stopAutoScroll);
+      carousel.addEventListener("mouseleave", startAutoScroll);
+
+      // Handle window resize
+      window.addEventListener("resize", function () {
+        const newSlidesToShow = window.innerWidth >= 768 ? 3 : 1;
+        if (newSlidesToShow !== slidesToShow) {
+          slidesToShow = newSlidesToShow;
+          currentIndex = 0;
+          updateCarousel();
+        }
+      });
+    });
+  </script>
+
+
+
+
+</body></html>

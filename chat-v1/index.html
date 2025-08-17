@@ -1,0 +1,880 @@
+<!--
+    Output type for gig-discovery chat endpoint (TypeScript):
+    --------------------------------------------------------
+    type GigDiscoveryChatOutput = {
+  data: {
+    budget: number; // the budget for the task
+    category: "architecture" | "book editing" | "digital marketing" | "missing" | "video editing" | "website design" | "website development";
+    deliveryTime: "24h" | "3d" | "7d" | "anytime" | "missing";
+    language: "English" | "missing";
+    taskDetails: string; // detailed description of the task
+    taskType: string; // the type of task the user wants to accomplish
+  };
+      isInformationComplete: boolean; // indicates if all necessary data is present
+      nextMessage: string; // the next message to ask the user for missing data or to thank them for the information
+    };
+    /*
+      Expert type (from experts JSON):
+      {
+        name: string;
+        image: string;
+        rating: number;
+        reviews: number;
+        skills: string[];
+        price: number;
+        profileUrl: string;
+        deliveryTime: string;
+        gigs: Array<{ title: string; minPrice: number; }>;
+        portfolio: any[];
+        // New field:
+        aboutMe: string; // Short bio/about the expert
+      }
+    */
+
+    ========================================================
+    # personalized-expert-message Endpoint
+
+    ## Task Description
+    Generates a personalized message from an expert to a user based on the user's gig requirements and the expert's profile.
+
+    ## Usage
+    POST https://data.livecycle.page/g/QI2te
+
+    ## Input Schema (arktype)
+    ```
+    {
+      data: {
+        deliveryTime: string, // the expected delivery time for the task
+        task: string, // the type of task requested by the user
+        details: string, // additional details about the task
+        budget: string, // the budget level for the task
+        expertAboutMe: string, // the 'about me' section of the expert
+        expertGigList: {
+          gigTitle: string, // the title of the gig
+          gigDescription: string // the description of the gig
+        }[] // list of gigs offered by the expert
+      }
+    }
+    ```
+
+    ## Example Input
+    ```
+    {
+      data: {
+        budget: "Medium",
+        deliveryTime: "5 days",
+        details: "I need a modern, responsive website for my small business, including a contact form and integration with social media. I have a logo and some images, but I need help with the overall design and layout.",
+        expertAboutMe: "I'm a professional web developer with over 8 years of experience building custom websites for businesses of all sizes. I specialize in creating visually appealing, user-friendly, and mobile-responsive sites that help clients grow their online presence.",
+        expertGigList: [
+          {
+            gigDescription: "I will design and develop a custom WordPress website tailored to your business needs, including up to 5 pages, contact form, and basic SEO.",
+            gigTitle: "Custom WordPress Website Development"
+          },
+          {
+            gigDescription: "I will redesign your existing website to improve its look, usability, and performance, ensuring it is mobile-friendly and optimized for search engines.",
+            gigTitle: "Website Redesign and Optimization"
+          },
+          {
+            gigDescription: "I will provide ongoing website maintenance, updates, and technical support to keep your site running smoothly.",
+            gigTitle: "Website Maintenance and Support"
+          }
+        ],
+        task: "Website design and development"
+      }
+    }
+    ```
+
+    ## Output Schema (JSON Schema)
+    ```
+    {
+      data: {
+        personalizedMessage: string, // a personalized message from the expert to the user (UI: ~4 lines)
+        relevantGigTitle: string // the title of the most relevant gig, or a fallback if none is found
+      }
+    }
+    ```
+    --><!DOCTYPE html><html lang="en"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K5HJ679');</script>
+<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Perfect Fiverr Expert | Chat Assistant</title>
+
+    <!-- Fiverr Fonts -->
+    <style>
+        @font-face {
+            font-family: "Macan";
+            src: url("assets/502483a0eb7a0109bba05fbd9b3743e7.woff2") format("woff2");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Macan";
+            src: url("assets/3d263b5d897300221339f211f2b74e5e.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Macan";
+            src: url("assets/d147812d01ddb77d6c271d088b816751.woff2") format("woff2");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Macan";
+            src: url("assets/9b72a311bb35194ff57bd6276ffbe2e7.woff2") format("woff2");
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
+    <!-- Tailwind CSS -->
+    
+    <!-- Alpine.js -->
+    <script defer="" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    
+
+    <style>
+        .chat-scroll {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .chat-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .expert-card-swipe {
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            cursor: grab;
+            user-select: none;
+        }
+        .expert-card-swipe.dragging {
+            cursor: grabbing;
+        }
+        .expert-card-swipe::-webkit-scrollbar {
+            display: none;
+        }
+        .expert-card {
+            scroll-snap-align: center;
+        }
+    </style>
+  <script type="text/javascript">
+  (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&((a=a[b[0]]),(d=b[1]));a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)));};}var a=b;"undefined"!==typeof c?(a=b[c]=[]):(c="mixpanel");a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d;};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2]);};}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d;};b._i.push([e,f,c]);};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g);}})(document,window.mixpanel||[]);
+  mixpanel.init("85e4a78448be5212958bd77a4aa38257", { track_pageview: true });
+  </script><link rel="stylesheet" href="styles-c991f1c470dfba8ae7863016c7eabc87.css">
+    <script>
+      window.lucide = {
+        createIcons: ()=>{}
+      }
+    </script>
+  </head>
+
+<body class="font-macan bg-gray-100 min-h-screen flex flex-col">
+  <div class="flex-1 flex flex-col justify-center items-center w-full min-h-screen">
+    <div class="w-full h-full flex flex-col
+      bg-white shadow-none border-none min-h-screen
+      md:max-w-lg md:mx-auto md:my-8 md:rounded-3xl md:shadow-xl md:border md:border-gray-200
+      md:h-[80vh] md:min-h-[600px] md:flex-none
+      transition-all duration-300
+      ">
+      <!-- Header Section -->
+      <header id="header" class="bg-white shadow-sm border-b border-gray-100 px-4 py-3 flex items-center justify-between relative z-10 md:rounded-t-3xl md:shadow-none md:border-b md:border-gray-200">
+          <div class="flex items-center space-x-3">
+              <img src="assets/df852837e67bfdb312ac8a8d453525f0.webp" alt="Fiverr" class="h-6" decoding="async" style="aspect-ratio: 291 / 87">
+              <div class="text-sm font-semibold text-neutral-heading">Expert Finder</div>
+          </div>
+         <button onclick="resetChat()" class="text-neutral-light hover:text-neutral-heading transition-colors" data-anx-event="reset_chat" data-anx-props-action="reset" data-anx-props-scope="header">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+          </button>
+      </header>
+
+      <!-- Main Chat Interface -->
+      <main id="chat-interface" class="flex flex-col flex-1 min-h-0" x-data="chatApp()">
+        <!-- Chat Messages Container -->
+        <section id="chat-messages" class="flex-1 overflow-y-auto chat-scroll px-4 py-6 space-y-4 relative" x-ref="chatContainer" style="height: calc(100% - 80px);">
+            <!-- Welcome Message -->
+            <div class="flex justify-start">
+                <div class="bg-white rounded-2xl rounded-bl-md px-4 py-3 max-w-xs shadow-sm border border-gray-100">
+                    <div class="text-sm text-neutral-heading font-medium mb-1">Fiverr Assistant</div>
+                    <div class="text-sm text-neutral-text">Hi! I'm here to help you find the perfect expert for your project. Tell me about what you need help with.</div>
+                </div>
+            </div>
+
+            <!-- Dynamic Messages -->
+            <template x-for="message in messages" :key="message.id">
+                <div class="flex" :class="message.type === 'user' ? 'justify-end' : 'justify-start'">
+                    <!-- User Message -->
+                    <div x-show="message.type === 'user'" class="bg-primary text-white rounded-2xl rounded-br-md px-4 py-3 max-w-xs shadow-sm">
+                        <div class="text-sm" x-text="message.content"></div>
+                    </div>
+
+                    <!-- System Message -->
+                    <div x-show="message.type === 'system'" class="bg-white rounded-2xl rounded-bl-md px-4 py-3 max-w-xs shadow-sm border border-gray-100">
+                        <div class="text-sm text-neutral-heading font-medium mb-1">Fiverr Assistant</div>
+                        <div class="text-sm text-neutral-text" x-text="message.content"></div>
+                    </div>
+
+                    <!-- Processing Message -->
+                    <div x-show="message.type === 'processing'" class="bg-white rounded-2xl rounded-bl-md px-4 py-3 max-w-xs shadow-sm border border-gray-100">
+                        <div class="text-sm text-neutral-heading font-medium mb-1">Fiverr Assistant</div>
+                        <div class="flex items-center space-x-2">
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+                                <div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+                                <div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+                            </div>
+                            <span class="text-sm text-neutral-text" x-text="message.content"></span>
+                        </div>
+                    </div>
+
+                    <!-- Experts Gallery -->
+                    <div x-show="message.type === 'experts'" class="w-full">
+                        <div class="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm border border-gray-100 mb-4">
+                            <div class="text-sm text-neutral-heading font-medium mb-1">Fiverr Assistant</div>
+                            <div class="text-sm text-neutral-text">Perfect! I found the best experts for your project. Swipe through to see their profiles:</div>
+                        </div>
+                        
+                        <!-- Expert Cards Swipe Gallery -->
+                        <div class="relative">
+                            <div class="expert-card-swipe flex overflow-x-auto space-x-4 pb-4" x-ref="expertGallery">
+                                <template x-for="(expert, index) in message.experts" :key="expert.name">
+                                    <div class="expert-card flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                                        <!-- Expert Image -->
+                                        <div class="relative h-48 bg-gradient-to-br from-primary to-primary-dark">
+                                            
+                                            <div class="absolute top-4 right-4 bg-white rounded-full px-2 py-1 flex items-center space-x-1">
+                                                <svg class="w-3 h-3 text-yellow-400 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                                <span class="text-xs font-semibold" x-text="expert.rating"></span>
+                                            </div><img :src="expert.photo" :alt="expert.name" class="w-full h-full object-cover" style="object-position: top;"></div>
+
+                                        <!-- Expert Info -->
+                                        <div class="p-4">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <h3 class="font-semibold text-neutral-heading" x-text="expert.name"></h3>
+                                                <div class="text-xs text-neutral-light" x-text="expert.reviewsCount + ' reviews'"></div>
+                                            </div>
+
+                                            <!-- Min Price Section -->
+                                            <div class="mb-2">
+                                                <span class="text-xs text-neutral-light">Min Price:&nbsp;</span>
+                                                <span class="text-sm font-semibold text-primary" x-text="expert.minPrice !== null ? ('$' + expert.minPrice) : 'N/A'"></span>
+                                                <template x-if="$root &amp;&amp; $root.projectData &amp;&amp; $root.projectData.price">
+                                                    <span class="text-xs text-neutral-light">&nbsp;|&nbsp;Your Budget: <span class="font-semibold text-accent-pink" x-text="'$' + $root.projectData.price"></span></span>
+                                                </template>
+                                            </div>
+
+                                            <!-- USP -->
+                                            <p class="text-sm text-neutral-text mb-3 line-clamp-4" x-text="expert.personalizedUSP"></p>
+
+                                            <!-- Skills -->
+                                            <div class="flex flex-wrap gap-1 mb-4">
+                                                <template x-for="skill in expert.skills.slice(0, 3)" :key="skill">
+                                                    <span class="px-2 py-1 bg-accent-beige text-accent-pink text-xs rounded-full font-medium" x-text="skill"></span>
+                                                </template>
+                                                <span x-show="expert.skills.length > 3" class="px-2 py-1 bg-gray-100 text-neutral-light text-xs rounded-full" x-text="'+' + (expert.skills.length - 3) + ' more'"></span>
+                                            </div>
+
+                                            <!-- CTA Link to Expert Profile -->
+                                            <a :href="expert.profileUrl" target="_blank" rel="noopener noreferrer" class="w-full inline-block text-center bg-primary text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 transform hover:scale-105" data-anx-event="view_profile" data-anx-props-action="view" data-anx-props-scope="expert_card">
+                                                View Profile
+                                            </a>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+
+                            <!-- Gallery Indicators -->
+                            <div class="flex justify-center space-x-2 mt-4" x-show="message.experts &amp;&amp; message.experts.length > 1">
+                                <template x-for="(expert, index) in message.experts" :key="'indicator-' + index">
+                                    <div class="w-2 h-2 rounded-full transition-colors duration-200" :class="currentExpertIndex === index ? 'bg-primary' : 'bg-gray-300'"></div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Typing Indicator -->
+            <div x-show="isTyping" class="flex justify-start">
+                <div class="bg-white rounded-2xl rounded-bl-md px-4 py-3 max-w-xs shadow-sm border border-gray-100">
+                    <div class="text-sm text-neutral-heading font-medium mb-1">Fiverr Assistant</div>
+                    <div class="flex items-center space-x-1">
+                        <div class="w-2 h-2 bg-neutral-light rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+                        <div class="w-2 h-2 bg-neutral-light rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+                        <div class="w-2 h-2 bg-neutral-light rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Input Section -->
+        <section id="chat-input" class="bg-white border-t border-gray-100 p-4 sticky bottom-0 w-full z-10" x-show="!isComplete">
+            <form @submit.prevent="sendMessage()" class="flex space-x-3">
+                <div class="flex-1 relative">
+                    <input type="text" x-model="currentMessage" :disabled="isProcessing" placeholder="Type your message..." class="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-gray-50 disabled:text-gray-400" :class="isProcessing ? 'cursor-not-allowed' : ''">
+                </div>
+                <button type="submit" :disabled="!currentMessage.trim() || isProcessing" class="bg-primary text-white p-3 rounded-2xl hover:bg-opacity-90 transition-all duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95" data-anx-event="send_message" data-anx-props-action="send" data-anx-props-scope="chat_input">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                </button>
+            </form>
+        </section>
+
+        <!-- Success Section -->
+        <section id="success-section" class="bg-white border-t border-gray-100 p-4 text-center" x-show="isComplete">
+            <div class="text-primary mb-2">
+                <svg class="w-8 h-8 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+            </div>
+            <div class="text-sm text-neutral-heading font-semibold mb-1">Expert Selected!</div>
+            <div class="text-xs text-neutral-text mb-4">You can now contact your chosen expert on Fiverr.</div>
+            <button @click="resetChat()" class="bg-primary text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-all duration-200" data-anx-event="find_another_expert" data-anx-props-action="reset" data-anx-props-scope="success_section">
+                Find Another Expert
+            </button>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  
+
+  <script>
+        function chatApp() {
+            return {
+                messages: [],
+                currentMessage: '',
+                isTyping: false,
+                isProcessing: false,
+                isComplete: false,
+                chatHistory: [],
+                currentExpertIndex: 0,
+                
+                init() {
+                    this.scrollToBottom();
+                    lucide.createIcons();
+                },
+
+                async sendMessage() {
+                    if (!this.currentMessage.trim() || this.isProcessing) return;
+
+                    const userMessage = this.currentMessage.trim();
+                    this.currentMessage = '';
+
+                    // Add user message to UI
+                    this.addMessage('user', userMessage);
+
+                    // Add to chat history as user message
+                    this.chatHistory.push({
+                        message: userMessage,
+                        timestamp: new Date().toISOString(),
+                        role: 'user'
+                    });
+
+                    // Process with API
+                    await this.processWithAPI();
+                },
+
+                async processWithAPI() {
+                    this.isProcessing = true;
+                    
+                    // Add processing message
+                    const processingMsg = this.addMessage('processing', 'Analyzing your requirements...');
+
+                    try {
+                        // gig-discovery-data-extraction Endpoint
+                        // POST https://data.livecycle.page/g/oxTxT
+                        // Input: { data: { chatHistory: [ { message, timestamp, role }, ... ] } }
+                        const response = await fetch('https://data.livecycle.page/g/oxTxT', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                data: {
+                                    chatHistory: this.chatHistory
+                                }
+                            })
+                        });
+
+                        const result = await response.json();
+                        
+                        // Remove processing message
+                        this.removeMessage(processingMsg.id);
+
+                        // The new output schema: result.data.data, result.data.isInformationComplete, result.data.nextMessage
+                        if (result.data && result.data.isInformationComplete === true) {
+                            // Information is complete, fetch experts
+                            // Add assistant message to chatHistory
+                            if (result.data.nextMessage) {
+                                this.chatHistory.push({
+                                    message: result.data.nextMessage,
+                                    timestamp: new Date().toISOString(),
+                                    role: 'assistant'
+                                });
+                            }
+                            await this.fetchExperts(result.data.data);
+                        } else {
+                            // Need more information
+                            const assistantMsg = result.data && result.data.nextMessage ? result.data.nextMessage : "Could you provide more details about your project?";
+                            this.addMessage('system', assistantMsg);
+                            // Add assistant message to chatHistory
+                            this.chatHistory.push({
+                                message: assistantMsg,
+                                timestamp: new Date().toISOString(),
+                                role: 'assistant'
+                            });
+                        }
+
+                    } catch (error) {
+                        console.error('API Error:', error);
+                        this.removeMessage(processingMsg.id);
+                        this.addMessage('system', 'Sorry, I encountered an error. Please try again.');
+                        // Add error message to chatHistory as assistant
+                        this.chatHistory.push({
+                            message: 'Sorry, I encountered an error. Please try again.',
+                            timestamp: new Date().toISOString(),
+                            role: 'assistant'
+                        });
+                    }
+
+                    this.isProcessing = false;
+                },
+
+                async fetchExperts(projectData) {
+                    // Add processing message for expert search
+                    const processingMsg = this.addMessage('processing', 'Finding your perfect experts...');
+
+                    try {
+                    // Load all experts from the correct asset URL based on domain
+                    let expertsUrl = 'https://playground.livecycle.io/api/playgrounds/cRHDk/assets/0fb598600d758081';
+                    try {
+                        // If running on fiverr.com or any subdomain, use the Fiverr experts data asset
+                        if (typeof window !== "undefined" && window.location && /\.fiverr\.com$/i.test(window.location.hostname) || window.location.hostname.endsWith('.fiverr.com')) {
+                            expertsUrl = 'https://lpt.fiverr.com/data-assets/chat-experts.json';
+                        }
+                    } catch (e) {}
+                    const response = await fetch(expertsUrl);
+                    const allExpertsData = await response.json();
+
+                        // projectData is the gig response from the previous chat step
+                        // Try to find the most relevant category in the expert data
+                        let selectedCategory = null;
+                        let expertsList = [];
+                        if (projectData && typeof projectData === 'object') {
+                            // Try to match by category property
+                            if (projectData.category && allExpertsData[projectData.category]) {
+                                selectedCategory = projectData.category;
+                                expertsList = allExpertsData[selectedCategory];
+                            } else {
+                                // Try to find a category that matches any keyword in projectData
+                                const lowerProject = JSON.stringify(projectData).toLowerCase();
+                                for (const cat of Object.keys(allExpertsData)) {
+                                    if (lowerProject.includes(cat.toLowerCase())) {
+                                        selectedCategory = cat;
+                                        expertsList = allExpertsData[cat];
+                                        break;
+                                    }
+                                }
+                                // Fallback: just pick the first category if nothing matches
+                                if (!selectedCategory && Object.keys(allExpertsData).length > 0) {
+                                    selectedCategory = Object.keys(allExpertsData)[0];
+                                    expertsList = allExpertsData[selectedCategory];
+                                }
+                            }
+                        }
+
+                        // Defensive: ensure we have an array
+                        if (!Array.isArray(expertsList)) expertsList = [];
+
+                        // Map experts to the expected format for the UI
+                        const mappedExperts = expertsList.map(expert => {
+                            // Calculate minPrice from gigs using minPrice field
+                            let minPrice = null;
+                            if (expert.gigs && expert.gigs.length > 0) {
+                                minPrice = Math.min(...expert.gigs.map(g => typeof g.minPrice === 'number' ? g.minPrice : Number(g.minPrice)).filter(p => !isNaN(p)));
+                            }
+                            return {
+                                name: expert.name,
+                                photo: expert.image,
+                                rating: expert.rating,
+                                reviewsCount: expert.reviews,
+                                personalizedUSP: expert.gigs && expert.gigs.length > 0 ? expert.gigs[0].title : '',
+                                skills: expert.skills || [],
+                                price: expert.price,
+                                profileUrl: expert.profileUrl,
+                                deliveryTime: expert.deliveryTime,
+                                gigs: expert.gigs || [],
+                                portfolio: expert.portfolio || [],
+                                minPrice: minPrice,
+                                aboutMe: expert.aboutMe || ""
+                            };
+                        });
+
+                        // --- Filter and rank experts according to user demands ---
+                        let filteredExperts = mappedExperts;
+                        // Scoring: closer to budget, higher rating, matching delivery time, and keyword overlap
+                        if (projectData) {
+                            // Budget is now a number, use directly
+                            let budget = null;
+                            if (typeof projectData.budget === "number" && !isNaN(projectData.budget)) {
+                                budget = projectData.budget;
+                            }
+                            // Parse delivery time (assume string like "3 days", "5d", "48h", etc.)
+                            let deliveryDays = null;
+                            if (projectData.deliveryTime) {
+                                const match = String(projectData.deliveryTime).match(/(\d+(\.\d+)?)/);
+                                if (match) deliveryDays = parseFloat(match[1]);
+                            }
+                            // Lowercase skills for matching
+                            let userSkills = [];
+                            if (projectData.taskDetails) {
+                                userSkills = projectData.taskDetails.toLowerCase().split(/\W+/).filter(Boolean);
+                            }
+                            // Use keywords from projectData.keywords if present
+                            let userKeywords = [];
+                            if (Array.isArray(projectData.keywords)) {
+                                userKeywords = projectData.keywords.map(k => k.toLowerCase());
+                            }
+                            // Score each expert
+                            filteredExperts = mappedExperts.map(expert => {
+                                let score = 0;
+                                // Budget: prefer minPrice <= budget, closer is better
+                                if (budget !== null && expert.minPrice != null) {
+                                    if (expert.minPrice <= budget) {
+                                        score += 30;
+                                        score += Math.max(0, 20 - Math.abs(budget - expert.minPrice)); // closer is better
+                                    } else {
+                                        score += Math.max(0, 10 - (expert.minPrice - budget) / 10);
+                                    }
+                                }
+                                // Delivery time: prefer <= requested
+                                if (deliveryDays && expert.deliveryTime) {
+                                    // Try to extract days from expert.deliveryTime
+                                    let expertDays = null;
+                                    const match = String(expert.deliveryTime).match(/(\d+(\.\d+)?)/);
+                                    if (match) expertDays = parseFloat(match[1]);
+                                    if (expertDays != null) {
+                                        if (expertDays <= deliveryDays) {
+                                            score += 20;
+                                            score += Math.max(0, 10 - (deliveryDays - expertDays));
+                                        } else {
+                                            score += Math.max(0, 5 - (expertDays - deliveryDays));
+                                        }
+                                    }
+                                }
+                                // Rating
+                                if (expert.rating) {
+                                    score += expert.rating * 10;
+                                }
+                                // Skill overlap
+                                if (userSkills.length && expert.skills && expert.skills.length) {
+                                    const overlap = expert.skills.map(s => s.toLowerCase()).filter(s => userSkills.includes(s)).length;
+                                    score += overlap * 5;
+                                }
+                                // Keyword overlap (extra boost)
+                                if (userKeywords.length && expert.skills && expert.skills.length) {
+                                    const overlap = expert.skills.map(s => s.toLowerCase()).filter(s => userKeywords.includes(s)).length;
+                                    score += overlap * 12;
+                                }
+                                // Reviews count
+                                if (expert.reviewsCount) {
+                                    score += Math.min(10, expert.reviewsCount / 10);
+                                }
+                                return { ...expert, _score: score };
+                            })
+                            // Sort by score descending
+                            .sort((a, b) => b._score - a._score);
+                        }
+                        // Only show top 3
+                        let topExperts = filteredExperts.slice(0, 3).map(e => {
+                            const { _score, ...rest } = e;
+                            return rest;
+                        });
+
+                        // --- Personalized Expert Message Patch ---
+                        // For each expert, call the new personalized-expert-message endpoint and add the message as personalizedUSP
+                        const personalizedMessages = await Promise.all(
+                          topExperts.map(async (expert) => {
+                            try {
+                              // Prepare gig list for API (array of objects)
+                              const gigList = (expert.gigs || []).map(g => ({
+                                gigTitle: g.title,
+                                gigDescription: g.gigDescription || g.title
+                              }));
+                              // Parse deliveryTime to match allowed values
+                              let deliveryTime = "1 week";
+                              if (projectData.deliveryTime === "24h") deliveryTime = "1 day";
+                              else if (projectData.deliveryTime === "3d") deliveryTime = "3 days";
+                              else if (projectData.deliveryTime === "7d") deliveryTime = "1 week";
+                              else if (projectData.deliveryTime === "anytime" || projectData.deliveryTime === "missing") deliveryTime = "1 week";
+                              else if (typeof projectData.deliveryTime === "string") deliveryTime = projectData.deliveryTime;
+                              // Budget is now a number; convert to string with dollar sign for API
+                              let budgetStr = "";
+                              if (typeof projectData.budget === "number") budgetStr = "$" + projectData.budget;
+                              else if (typeof projectData.budget === "string") budgetStr = projectData.budget;
+                              // Prepare input for API according to new schema
+                              const apiInput = {
+                                data: {
+                                  deliveryTime,
+                                  task: projectData.taskType || "",
+                                  details: projectData.taskDetails || "",
+                                  budget: budgetStr,
+                                  expertAboutMe: expert.aboutMe || "",
+                                  expertGigList: gigList
+                                }
+                              };
+                              const resp = await fetch('https://data.livecycle.page/g/aM_G2', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(apiInput)
+                              });
+                              const data = await resp.json();
+                              if (data && data.data && data.data.personalizedMessage) {
+                                return data.data.personalizedMessage;
+                              }
+                            } catch (e) {}
+                            // fallback: use gig title
+                            return expert.gigs && expert.gigs.length > 0 ? expert.gigs[0].title : '';
+                          })
+                        );
+                        topExperts = topExperts.map((expert, i) => ({
+                          ...expert,
+                          personalizedUSP: personalizedMessages[i]
+                        }));
+
+                        // Remove processing message
+                        this.removeMessage(processingMsg.id);
+
+                        if (topExperts.length > 0) {
+                            // Add experts gallery
+                            this.addMessage('experts', '', topExperts);
+                        } else {
+                            this.addMessage('system', 'Sorry, I couldn\'t find experts for your project right now. Please try again.');
+                        }
+
+                        // Setup gallery scroll listener
+                        this.$nextTick(() => {
+                            this.setupGalleryScroll();
+                            lucide.createIcons();
+                        });
+
+                    } catch (error) {
+                        console.error('Experts API Error:', error);
+                        this.removeMessage(processingMsg.id);
+                        this.addMessage('system', 'Sorry, I couldn\'t find experts right now. Please try again.');
+                    }
+                },
+
+                addMessage(type, content, experts = null) {
+                    const message = {
+                        id: Date.now() + Math.random(),
+                        type,
+                        content,
+                        experts,
+                        timestamp: new Date()
+                    };
+                    
+                    this.messages.push(message);
+                    this.$nextTick(() => {
+                        this.scrollToBottom();
+                    });
+                    
+                    return message;
+                },
+
+                removeMessage(messageId) {
+                    this.messages = this.messages.filter(msg => msg.id !== messageId);
+                },
+
+                selectExpert(expert) {
+                    this.addMessage('system', `Great choice! ${expert.name} is an excellent expert for your project. You can now contact them on Fiverr to get started.`);
+                    this.isComplete = true;
+                    this.$nextTick(() => {
+                        this.scrollToBottom();
+                    });
+                },
+
+                setupGalleryScroll() {
+                    const gallery = this.$refs.expertGallery;
+                    if (!gallery) return;
+
+                    // Gallery scroll indicator logic
+                    gallery.addEventListener('scroll', () => {
+                        const cardWidth = gallery.querySelector('.expert-card')?.offsetWidth || 0;
+                        const scrollLeft = gallery.scrollLeft;
+                        const newIndex = Math.round(scrollLeft / (cardWidth + 16)); // 16 is the gap
+                        this.currentExpertIndex = Math.max(0, Math.min(newIndex, gallery.children.length - 1));
+                    });
+
+                    // Enable drag-to-scroll for desktop (pointer: fine)
+                    if (window.matchMedia('(pointer: fine)').matches) {
+                        let isDown = false;
+                        let startX;
+                        let scrollLeft;
+
+                        gallery.addEventListener('mousedown', (e) => {
+                            // Only left mouse button
+                            if (e.button !== 0) return;
+                            isDown = true;
+                            gallery.classList.add('dragging');
+                            startX = e.pageX - gallery.offsetLeft;
+                            scrollLeft = gallery.scrollLeft;
+                            e.preventDefault();
+                        });
+                        gallery.addEventListener('mouseleave', () => {
+                            isDown = false;
+                            gallery.classList.remove('dragging');
+                        });
+                        gallery.addEventListener('mouseup', () => {
+                            isDown = false;
+                            gallery.classList.remove('dragging');
+                        });
+                        gallery.addEventListener('mousemove', (e) => {
+                            if (!isDown) return;
+                            e.preventDefault();
+                            const x = e.pageX - gallery.offsetLeft;
+                            const walk = (x - startX); // px moved
+                            gallery.scrollLeft = scrollLeft - walk;
+                        });
+                    }
+                },
+
+                scrollToBottom() {
+                    const container = this.$refs.chatContainer;
+                    if (container) {
+                        const shouldScroll = container.scrollTop + container.clientHeight >= container.scrollHeight - 100;
+                        if (shouldScroll) {
+                            container.scrollTop = container.scrollHeight;
+                        }
+                    }
+                    this.$nextTick(() => {
+                        const container = this.$refs.chatContainer;
+                        if (container) {
+                            container.scrollTop = container.scrollHeight;
+                        }
+                    });
+                },
+
+                resetChat() {
+                    this.messages = [];
+                    this.chatHistory = [];
+                    this.currentMessage = '';
+                    this.isTyping = false;
+                    this.isProcessing = false;
+                    this.isComplete = false;
+                    this.currentExpertIndex = 0;
+                }
+            }
+        }
+
+        // Global reset function
+        function resetChat() {
+            location.reload();
+        }
+
+        // Initialize icons when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5HJ679"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script id="anx-script-v1">
+window.anx = {
+    init: (track, globalProps = { pagename: window.location.pathname }) => {
+        window.anx.track = track
+        requestAnimationFrame(()=> {
+            window.anx.addLinksTracking({
+                forceTarget: window.anx.opts.forceATarget
+            })
+        })
+        document.addEventListener('click', function (e) {
+            const isHref = e.target.tagName === 'A' && e.target.hasAttribute('href');
+            let target = e.target.closest('[data-anx-event]');
+            if (!target) return; // Only if element has data-anx-event
+
+            let eventName = target.getAttribute('data-anx-event');
+            let props = { ...globalProps };
+
+            // Collect all data-anx-props-* attributes
+            Array.from(target.attributes).forEach(attr => {
+            if (attr.name.startsWith('data-anx-props-')) {
+                const propName = attr.name.replace('data-anx-props-', '');
+                props[propName] = attr.value;
+            }
+            });
+
+            // Check for external link
+            const isLink = target.tagName === 'A' && target.hasAttribute('href');
+            const href = isLink ? target.getAttribute('href') : null;
+            const isExternal = isLink && href && !href.startsWith("#") && !href.includes(window.location.host) && !target.hasAttribute('target');
+
+            if (isExternal) {
+            // Prevent immediate navigation
+            e.preventDefault();
+
+            // Send event to tracker, then redirect
+            track(eventName, props);
+            setTimeout(function () {
+                window.location = href;
+            }, 300);
+            } else {
+            // Send event to tracker for non-external or other elements
+            track(eventName, props);
+            }
+        });
+    },
+    addLinksTracking: (opts = {}) => {
+        document.querySelectorAll('a[href]').forEach(a => {
+            if (opts.forceTarget){
+                if (!a.hasAttribute('target')){
+                    a.setAttribute('target', '_blank')
+                }
+            }
+            const closest = a.closest('[data-anx-event]')
+            if (closest) return
+            a.setAttribute('data-anx-event', 'link_click')
+            a.setAttribute('data-anx-props-scope', 'page')
+            a.setAttribute('data-anx-props-action', 'navigate')
+            a.setAttribute('data-anx-props-href', a.href)
+            a.setAttribute('data-anx-props-label', (a.textContent || '').substring(0, 30) )
+            
+            return;
+        })
+    }
+};
+
+window.anx.trackers = {
+    console: (...args) => console.log("event", ...args),
+    mixpanel: (...args) => mixpanel.track(...args),
+}
+
+window.anx.opts = {"forceATarget":true}
+window.anx.activeTrackers = ["mixpanel","console"]
+window.anx.variables = {"pageName":"chat-seller"}
+
+window.anx.init((...args) => {
+    window.anx.activeTrackers.forEach(tracker => {
+        window.anx.trackers[tracker](...args)
+    })
+}, window.anx.variables);
+</script></body></html>
